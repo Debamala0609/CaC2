@@ -142,3 +142,76 @@ height: 100vh;
 .dropbtn {
     animation: shake 0.5s ease-in-out infinite;
 }
+.tracking-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 80px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+#courier-select,
+#tracking-input,
+#start-date,
+#end-date {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#track-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#tracking-result {
+    margin-top: 20px;
+}
+
+.error-message {
+    color: red;
+}
+#container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 80px;
+}
+
+
+#track-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#tracking-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#track-result {
+    margin-top: 20px;
+}
