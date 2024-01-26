@@ -1,0 +1,274 @@
+{% load static %}
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="{% static "styles.css" %}">
+<script src="script.js"></script>
+
+</head>
+<body>
+  <div class="header">   
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"
+        style="font-size:32px;">
+     </i>   
+    </label>
+    <label class="logo">CourierConnecT</label>
+    <ul> 
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class= "hover"href="about.html">About</a></li>
+        <li><a class= "hover"href="service.html">Services</a></li>
+        <li><a class= "hover"href="contact.html">contact</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Track Order</button>
+            <div class="dropdown-content">
+              <a class= "hover" href="staff.html">Staff</a>
+              <a class= "hover" href="reci.html">Recipent</a>
+            </div>
+          </div>
+    </ul>
+   </nav> 
+   
+
+
+    <!--Content before waves-->
+    <div class="inner-header flex">
+   <!--log in-->
+   <center>
+    <div class="container">
+      <div class="banner">
+        <h1>YOUR TEXT HERE</h1>
+        <h3>Here's the information, about your company, product, I don't know.</h3>
+        <h3>Feel free!</h3>
+      </div>
+      <div class="form">
+        <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
+        <small>Need an Account? <a class="aa"> Sign Up</a></small>
+        <input type="email" autocomplete placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button>Sign In</button>
+        <a id="forgot" class="aa">Forgot Your Password?</a>
+      </div>
+    </div>
+  </center>
+  <!-- login ends -->
+    </div>
+    
+    <!--Waves Container-->
+    <div>
+       
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    
+    </div>
+    <!--Waves end-->
+    
+    </div>
+    <!--Header ends-->
+     <!-- About us-->
+     <div class="about" id="about">
+      <h1 style="font-weight: bolder;">About us</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ipsam labore quos quam, tempora recusandae nemo laudantium, ad vitae vel repellendus dolores placeat. Velit distinctio natus, facilis quia! Voluptas nam, animi quidem doloremque mollitia accusamus voluptatum quos totam consequatur. Temporibus rerum recusandae nobis vel architecto beatae esse facilis repellat. Et repellat similique ad ab harum doloribus dolorum. Iste suscipit blanditiis vero qui aliquid omnis quasi, delectus vel adipisci et ratione maiores soluta facilis earum voluptate.</p>
+      <div class="btn"><a href="#">Learn More</a></div>
+    </div>  
+    <!-- container-->
+    <div class="grids">
+      <div class="card-one">
+        <div class="card">
+          <div class="card__side card__side--front" id="front-1">
+            <div class="text-box">
+              <h3 class="text-box-top">Flipping Cards</h3>
+              <h1 class="text-box-middle">Awesome!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+          <div class="card__side card__side--back" id="back-1">
+            <div class="text-box">
+              <h3 class="text-box-top">Cards Flipped</h3>
+              <h1 class="text-box-middle">Great!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-two">
+        <div class="card">
+          <div class="card__side card__side--front" id="front-2">
+            <div class="text-box">
+              <h3 class="text-box-top">Flipping Cards</h3>
+              <h1 class="text-box-middle">Awesome!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+          <div class="card__side card__side--back" id="back-2">
+            <div class="text-box">
+              <h3 class="text-box-top">Cards Flipped</h3>
+              <h1 class="text-box-middle">Great!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-three">
+        <div class="card">
+          <div class="card__side card__side--front" id="front-3">
+            <div class="text-box">
+              <h3 class="text-box-top">Flipping Cards</h3>
+              <h1 class="text-box-middle">Awesome!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+          <div class="card__side card__side--back" id="back-3">
+            <div class="text-box">
+              <h3 class="text-box-top">Cards Flipped</h3>
+              <h1 class="text-box-middle">Great!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-four">
+        <div class="card">
+          <div class="card__side card__side--front" id="front-4">
+            <div class="text-box">
+              <h3 class="text-box-top">Flipping Cards</h3>
+              <h1 class="text-box-middle">Awesome!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+          <div class="card__side card__side--back" id="back-4">
+            <div class="text-box">
+              <h3 class="text-box-top">Cards Flipped</h3>
+              <h1 class="text-box-middle">Great!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-five">
+        <div class="card">
+          <div class="card__side card__side--front" id="front-5">
+            <div class="text-box">
+              <h3 class="text-box-top">Flipping Cards</h3>
+              <h1 class="text-box-middle">Awesome!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+          <div class="card__side card__side--back" id="back-5">
+            <div class="text-box">
+              <h3 class="text-box-top">Cards Flipped</h3>
+              <h1 class="text-box-middle">Great!</h1>
+              <h3 class="text-box-lower">--- More Text ---</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+  <!--contact us-->
+  <center>
+    <div style="  background-image: url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500);">
+    <h1 style="font-weight: bolder; color: #fff;"> Contact Us </h1><br>
+    <div class="container" >
+      <div class="banner">
+        <h1>YOUR TEXT HERE</h1>
+        <h3>Here's the information, about your company, product, I don't know.</h3>
+        <h3>Feel free!</h3>
+      </div>
+    <div class="form" style="border: 2px solid rgb(31,31,32);">
+      <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
+      <input type="email" autocomplete placeholder="Email">
+      <input type="password" placeholder="Contact Number">
+      <textarea placeholder="Message" style="width:80%; height: 15%;"></textarea><br>
+      <button>Submit</button>
+    </div>
+  </div>
+</div>
+</center>
+<!--social icon-->
+
+<!--Footer-->
+<footer>
+  <section id="side1">
+    <h3>Side 1</h3>
+    <ol>
+      <li>Down to the Wire</li>
+      <li>Burned</li>
+      <li>Mr. Soul</li>
+      <li>Broken Arrow</li>
+      <li>Expecting to Fly</li>
+      <li>Sugar Mountain</li>
+    </ol>
+  </section>
+  <section id="side2">
+    <h3>Side 2</h3>
+    <ol>
+      <li>I Am a Child</li>
+      <li>The Loner</li>
+      <li>The Old Laughing Lady</li>
+      <li>Cinnamon Girl</li>
+      <li>Down by the River</li>
+    </ol>
+  </section>
+  <section id="side3">
+    <h3>Side 3</h3>
+    <ol>
+      <li>Cowgirl in the Sand</li>
+      <li>I Believe in You</li>
+      <li>After the Gold Rush</li>
+      <li>Southern Man</li>
+      <li>Helpless</li>
+    </ol>
+  </section>
+  <section id="side4">
+    <h3>Side 4</h3>
+    <ol>
+      <li>Ohio</li>
+      <li>Soldier</li>
+      <li>Old Man</li>
+      <li>A Man Needs a Maid</li>
+      <li>Harvest</li>
+      <li>Heart of Gold</li>
+      <li>Star of Bethlehem</li>
+    </ol>
+  </section>
+  <section id="side5">
+    <h3>Side 5</h3>
+    <ol>
+      <li>The Needle and the Damage Done</li>
+      <li>Tonight’s the Night (Part&nbsp;1)</li>
+      <li>Tired Eyes</li>
+      <li>Walk On</li>
+      <li>For the Turnstiles</li>
+      <li>Winterlong</li>
+      <li>Deep Forbidden Lake</li>
+    </ol>
+  </section>
+  <section id="side6">
+    <h3>Side 6</h3>
+    <ol>
+      <li>Like a Hurricane</li>
+      <li>Love Is a Rose</li>
+      <li>Cortez the Killer</li>
+      <li>Campaigner</li>
+      <li>Long May You Run</li>
+    </ol>
+  </section>
+</footer>
+
+    </body>
+    </html>
