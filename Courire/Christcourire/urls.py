@@ -8,7 +8,7 @@ urlpatterns = [
     path  ('contact',views.contact,name='contact'),
     path  ('reci',views.reci,name='reci'),
     path  ('reg',views.reg,name='reg'),
-    path  ('dash',views.dash,name='dash'),
+    path  ('dashboard',views.dashboard,name='dashboard'),
     path  ('staff',views.staff,name='staff'),
     path  ('staffreg',views.staffreg,name='staffreg'),
     
