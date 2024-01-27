@@ -1,4 +1,6 @@
+{%  extends "base.html" %}
 {% load static %}
+{% block content %}
 <html lang="en">
   <head>
   <meta charset="UTF-8">
@@ -20,10 +22,10 @@
     </label>
     <label class="logo">CourierConnecT</label>
     <ul> 
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a class= "hover"href="about.html">About</a></li>
-      <li><a class= "hover"href="service.html">Services</a></li>
-      <li><a class= "hover"href="contact.html">contact</a></li>
+      <li><a class="active" href="{% url 'home' %}">Home</a></li>
+      <li><a class= "hover"href="{% url 'About' %}">About</a></li>
+      <li><a class= "hover"href="{% url 'Service' %}">Services</a></li>
+      <li><a class= "hover"href="{% url 'Contact' %}">contact</a></li>
         <div class="dropdown">
             <button class="dropbtn">Track Order
               <a class= "hover" href="staff.html">Staff</a>
@@ -268,5 +270,6 @@
   </section>
 </footer>
 
-    </body>
-    </html>
+</body>
+</html>
+{% endblock content %} 
