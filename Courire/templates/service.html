@@ -1,6 +1,4 @@
-{%  extends "base.html"  %}
 {% load static %}
-{% block content %}
 <html lang="en">
   <head>
   <meta charset="UTF-8">
@@ -22,31 +20,17 @@
     </label>
     <label class="logo">CourierConnecT</label>
     <ul> 
-<<<<<<< HEAD:Courire/templates/contact.html
       <li><a class="active" href="{% url 'index' %}">Home</a></li>
       <li><a class= "hover" href="{% url 'about' %}">About</a></li>
       <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
       <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
       <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
-=======
-      <li><a class="active" href="{% url 'home' %}">Home</a></li>
-      <li><a class= "hover"href="{% url 'About' %}">About</a></li>
-      <li><a class= "hover"href="{% url 'Service' %}">Services</a></li>
-      <li><a class= "hover"href="{% url 'Contact' %}">contact</a></li>
-        <div class="dropdown">
-            <button class="dropbtn">Track Order</button>
-            <div class="dropdown-content">
-              <a class= "hover" href="staff.html">Staff</a>
-              <a class= "hover" href="reci.html">Recipent</a>
-            </div>
-          </div>
-    </ul>
->>>>>>> 6d4c31e17a299f530826aad45f4c154be064a28c:Courire/templates/choto/contact.html
    </nav> 
+   
 
     <!--Content before waves-->
     <div class="inner-header flex">
-   
+   <!--log in-->
    <center>
     <div class="container">
       <div class="banner">
@@ -55,6 +39,7 @@
         <h3>Feel free!</h3>
       </div>
   </center>
+  <!-- login ends -->
     </div>
     
     <!--Waves Container-->
@@ -75,24 +60,99 @@
     
     </div>
   </div>
-  <center>
-    <h1 style="font-weight: bolder;"> Contact Us </h1><br>
-        <div class="container" >
-          <div class="banner" style="color: black; background-image:url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500) ;">
-                <h1>YOUR TEXT HERE</h1>
-                <h3>Here's the information, about your company, product, I don't know.</h3>
-                <h3>Feel free!</h3>
-              </div>
-            <div class="form" style="border: 2px solid rgb(31,31,32);">
-              <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
-              <input type="email" autocomplete placeholder="Email">
-              <input type="password" placeholder="Contact Number">
-              <textarea placeholder="Message" style="width:80%; height: 15%;"></textarea><br>
-              <button>Submit</button>
-            </div>
+   <!-- container-->
+   <div class="grids">
+    <div class="card-one">
+      <div class="card">
+        <div class="card__side card__side--front" id="front-1">
+          <div class="text-box">
+            <h3 class="text-box-top">Flipping Cards</h3>
+            <h1 class="text-box-middle">Awesome!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
           </div>
         </div>
-</center>
+        <div class="card__side card__side--back" id="back-1">
+          <div class="text-box">
+            <h3 class="text-box-top">Cards Flipped</h3>
+            <h1 class="text-box-middle">Great!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-two">
+      <div class="card">
+        <div class="card__side card__side--front" id="front-2">
+          <div class="text-box">
+            <h3 class="text-box-top">Flipping Cards</h3>
+            <h1 class="text-box-middle">Awesome!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+        <div class="card__side card__side--back" id="back-2">
+          <div class="text-box">
+            <h3 class="text-box-top">Cards Flipped</h3>
+            <h1 class="text-box-middle">Great!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-three">
+      <div class="card">
+        <div class="card__side card__side--front" id="front-3">
+          <div class="text-box">
+            <h3 class="text-box-top">Flipping Cards</h3>
+            <h1 class="text-box-middle">Awesome!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+        <div class="card__side card__side--back" id="back-3">
+          <div class="text-box">
+            <h3 class="text-box-top">Cards Flipped</h3>
+            <h1 class="text-box-middle">Great!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-four">
+      <div class="card">
+        <div class="card__side card__side--front" id="front-4">
+          <div class="text-box">
+            <h3 class="text-box-top">Flipping Cards</h3>
+            <h1 class="text-box-middle">Awesome!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+        <div class="card__side card__side--back" id="back-4">
+          <div class="text-box">
+            <h3 class="text-box-top">Cards Flipped</h3>
+            <h1 class="text-box-middle">Great!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-five">
+      <div class="card">
+        <div class="card__side card__side--front" id="front-5">
+          <div class="text-box">
+            <h3 class="text-box-top">Flipping Cards</h3>
+            <h1 class="text-box-middle">Awesome!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+        <div class="card__side card__side--back" id="back-5">
+          <div class="text-box">
+            <h3 class="text-box-top">Cards Flipped</h3>
+            <h1 class="text-box-middle">Great!</h1>
+            <h3 class="text-box-lower">--- More Text ---</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br><br> <br><br> <br> <br>
       <footer>
         <section id="side1">
           <h3>Side 1</h3>
@@ -161,5 +221,4 @@
         </section>
       </footer>
 </body>
-</html>    
-{% endblock content %}  
+</html>      
