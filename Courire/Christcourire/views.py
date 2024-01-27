@@ -9,3 +9,7 @@ def about(request):
     return render(request,"about.html")
 def contact(request):
     return render(request,"contact.html")
+def reci(request):
+    return render(request,"reci.html")
+def reg(request):
+    return render(request,"reg.html")

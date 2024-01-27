@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <link rel="stylesheet" href="{% static "styles.css" %}">
-<script src="script.js"></script>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+
 
 </head>
 <body>
@@ -20,20 +20,14 @@
     </label>
     <label class="logo">CourierConnecT</label>
     <ul> 
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a class= "hover"href="about.html">About</a></li>
-        <li><a class= "hover"href="service.html">Services</a></li>
-        <li><a class= "hover"href="contact.html">contact</a></li>
-        <div class="dropdown">
-            <button class="dropbtn">Track Order</button>
-            <div class="dropdown-content">
-              <a class= "hover" href="staff.html">Staff</a>
-              <a class= "hover" href="reci.html">Recipent</a>
-            </div>
-          </div>
-    </ul>
+      <li><a class="active" href="{% url 'index' %}">Home</a></li>
+      <li><a class= "hover" href="{% url 'about' %}">About</a></li>
+      <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
+      <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
+      <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
    </nav> 
    
+
 
 
     <!--Content before waves-->
