@@ -1,4 +1,6 @@
+{%  extends "base.html" %}
 {% load static %}
+{% block content %}
 <html lang="en">
   <head>
   <meta charset="UTF-8">
@@ -20,11 +22,24 @@
     </label>
     <label class="logo">CourierConnecT</label>
     <ul> 
+<<<<<<< HEAD:Courire/templates/index.html
       <li><a class="active" href="{% url 'index' %}">Home</a></li>
       <li><a class= "hover" href="{% url 'about' %}">About</a></li>
       <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
       <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
       <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
+=======
+      <li><a class="active" href="{% url 'home' %}">Home</a></li>
+      <li><a class= "hover"href="{% url 'About' %}">About</a></li>
+      <li><a class= "hover"href="{% url 'Service' %}">Services</a></li>
+      <li><a class= "hover"href="{% url 'Contact' %}">contact</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Track Order
+              <a class= "hover" href="staff.html">Staff</a>
+            </button>
+            </div>
+    </ul>
+>>>>>>> 6d4c31e17a299f530826aad45f4c154be064a28c:Courire/templates/choto/index.html
    </nav> 
    
 
@@ -263,5 +278,6 @@
   </section>
 </footer>
 
-    </body>
-    </html>
+</body>
+</html>
+{% endblock content %} 
