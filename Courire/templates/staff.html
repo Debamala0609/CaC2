@@ -1,0 +1,44 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <div class="header">  
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"
+        style="font-size:32px;">
+     </i>   
+    </label>
+    <label class="logo">CourierConnecT</label>
+    <ul> 
+        <li><a class="active" href="{% url 'index' %}">Home</a></li>
+        <li><a class= "hover" href="{% url 'about' %}">About</a></li>
+        <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
+        <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
+        <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
+          <div class="dropdown">
+            <button class="dropbtn">Track Order</button>
+            <div class="dropdown-content">
+              <a class= "hover" href="staff.html">Staff</a>
+              <a class= "hover" href="reci.html">Recipent</a>
+            </div> 
+          </div>
+        </li>
+    </ul>
+   </nav> 
+   <center>
+   <div id="login">
+          <form action="login.php" method="post" align="center">
+              <h1>[ Admin Panel ]</h1>
+              <input name="user" type="text" placeholder="register" />
+              <input name="pass" type="password" placeholder="passcode" />
+              <button class="btn" name="login" type="submit">login</button>
+              <button class="btn">forgot?</button>
+          </form>
+   </div>
+   </center>
+      <div id="credit">
+          <a href="">&copy;</a>
+      </div>
+  </body>

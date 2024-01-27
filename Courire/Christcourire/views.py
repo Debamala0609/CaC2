@@ -15,3 +15,9 @@ def reg(request):
     return render(request,"reg.html")
 def login(request):
     return render(request,"index.html")
+def login(request):
+    return render(request,"dashboard.html")
+def login(request):
+    return render(request,"staff.html")
+def login(request):
+    return render(request,"staffreg.html")
