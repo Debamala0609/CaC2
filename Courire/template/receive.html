@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Delivery Entry</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+
+    <h2>Parcel Delivery Entry</h2>
+
+    <form action="/submit-delivery" method="post">
+        <!-- Use appropriate action and method attributes based on your server-side implementation -->
+
+        <label for="parcelId">Parcel ID:</label>
+        <input type="text" id="parcelId" name="parcelId" required>
+
+        <label for="senderName">Sender's Name:</label>
+        <input type="text" id="senderName" name="senderName" required>
+
+        <label for="senderContact">Sender's Contact:</label>
+        <input type="tel" id="senderContact" name="senderContact" required>
+
+        <label for="recipientName">Recipient's Name:</label>
+        <input type="text" id="recipientName" name="recipientName" required>
+
+        <label for="recipientContact">Recipient's Contact:</label>
+        <input type="tel" id="recipientContact" name="recipientContact" required>
+
+        <label for="deliveryDate">Delivery Date:</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+        <label for="company">Select Company:</label>
+        <select id="company" name="company" required>
+            <option value="amazon">Amazon</option>
+            <option value="flipkart">Flipkart</option>
+            <option value="myntra">Myntra</option>
+            <option value="nykaa">Nykaa</option>
+            <option value="nykaa">Others</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="additionalNotes">Additional Notes:</label>
+        <textarea id="additionalNotes" name="additionalNotes" rows="4"></textarea>
+
+        <button type="submit">Submit Delivery Details</button>
+    </form>
+</body>
+</html>
