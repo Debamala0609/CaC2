@@ -12,7 +12,4 @@ urlpatterns = [
     path  ('staff',staff,name='staff'),
     path  ('staffreg',staffreg,name='staffreg'),
     
-
-
-
 ]

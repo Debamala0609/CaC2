@@ -1,15 +1,8 @@
+{% extends 'base.html' %}
+
 {% load static %}
-<html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+{%block content%}
 
-  <link rel="stylesheet" href="{% static 'styles.css' %}">
-
-
-</head>
-<body>
   <div class="header">   
   <nav>
     <input type="checkbox" id="check">
@@ -45,7 +38,9 @@
         <input type="email" autocomplete placeholder="Email Id">
         <input type="password" autocomplete placeholder="Password">
         <input type="password" autocomplete placeholder="Confirm Password">
-        <button>Sign Up</button>
+
+        <button href="{% url 'reg' %}">Sign Up</button>
+        {% comment %} <button> Sign Up</button> {% endcomment %}
       </div>
     </div>
   </center>
@@ -138,5 +133,4 @@
           </ol>
         </section>
       </footer>
-</body>
-</html>      
+{% endblock content %}      
