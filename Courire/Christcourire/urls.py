@@ -1,18 +1,16 @@
 from django.urls import path
-from Christcourire import views 
+# from Christcourire import views
+from Christcourire.views import index,service,about,contact,reci,reg,dashboard,staff,staffreg
 
 urlpatterns = [
-    path  ('',views.index,name='index'),
-    path  ('service',views.service,name='service'),
-    path  ('about',views.about,name='about'), 
-    path  ('contact',views.contact,name='contact'),
-    path  ('reci',views.reci,name='reci'),
-    path  ('reg',views.reg,name='reg'),
-    path  ('dashboard',views.dashboard,name='dashboard'),
-    path  ('staff',views.staff,name='staff'),
-    path  ('staffreg',views.staffreg,name='staffreg'),
+    path  ('',index,name='index'),
+    path  ('service',service,name='service'),
+    path  ('about',about,name='about'), 
+    path  ('contact',contact,name='contact'),
+    path  ('reci',reci,name='reci'),
+    path  ('reg',reg,name='reg'),
+    path  ('dashboard',dashboard,name='dashboard'),
+    path  ('staff',staff,name='staff'),
+    path  ('staffreg',staffreg,name='staffreg'),
     
-
-
-
 ]
