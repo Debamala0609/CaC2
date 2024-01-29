@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Delivery Entry</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <h2>Parcel Return Form</h2>
+
+    <form action="/submit-return" method="post">
+        <!-- Use appropriate action and method attributes based on your server-side implementation -->
+
+        <label for="parcelId">Parcel ID:</label>
+        <input type="text" id="parcelId" name="parcelId" required>
+
+        <label for="returnOtp">Return OTP:</label>
+        <input type="text" id="returnOtp" name="returnOtp" required>
+
+        <label for="expectedReturnDate">Expected Return Date:</label>
+        <input type="date" id="expectedReturnDate" name="expectedReturnDate" required>
+
+        <label for="company">Select Company:</label>
+        <select id="company" name="company" required>
+            <option value="amazon">Amazon</option>
+            <option value="flipkart">Flipkart</option>
+            <option value="myntra">Myntra</option>
+            <option value="nykaa">Nykaa</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="returnInstructions">Return Instructions:</label>
+        <textarea id="returnInstructions" name="returnInstructions" rows="4"></textarea>
+
+        <button type="submit">Submit Return Request</button>
+    </form>
+
+</body>
+
+</html>

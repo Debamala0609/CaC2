@@ -57,7 +57,7 @@ ROOT_URLCONF = 'Courire.urls'
 TEMPLATES = [ 
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
+        'DIRS': ["templates","template"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
