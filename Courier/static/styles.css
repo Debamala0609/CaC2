@@ -2,6 +2,9 @@
 
 body {
   margin:0;
+  background-image: url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500);
+  background-repeat: no-repeat;
+  
 }
 
 h1 {
@@ -21,9 +24,6 @@ p {
 
   position:relative;
   text-align:center;
-  background-image: url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500);
-  color: #000;
-
 }
 .logo {
   width:50px;
@@ -38,6 +38,7 @@ p {
   width:100%;
   margin: 0;
   padding: 0;
+
 }
 
 .flex { /*Flexbox for containers*/

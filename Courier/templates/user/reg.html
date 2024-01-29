@@ -19,9 +19,10 @@
       <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
       <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
    </nav> 
-    <!--Content before waves-->
-    <div class="inner-header flex">
-   <!--Track Order-->
+   
+ <!--Content before waves-->
+ <div class="inner-header flex">
+    <!--Registration-->
    <center>
     <div class="container">
       <div class="banner">
@@ -31,8 +32,11 @@
       </div>
       <div class="form">
         <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
-        <small>Already have an Account? <a class="aa" href="{% url 'index' %}"> Sign In</a></small>
+        <small>Have an Account? <a class="aa"  href="{% url 'index' %}"> Sign In</a></small>
+        <input type="email" autocomplete placeholder="Email">
+        <input type="text" autocomplete placeholder="Phone Number">
         <input type="text" autocomplete placeholder="Registration Number">
+<<<<<<< HEAD
         <input type="text" autocomplete placeholder="User Name">
         <input type="text" autocomplete placeholder="Contact Number">
         <input type="email" autocomplete placeholder="Email Id">
@@ -41,10 +45,17 @@
 
         <button href="{% url 'reg' %}">Sign Up</button>
         {% comment %} <button> Sign Up</button> {% endcomment %}
+=======
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirmm Password">
+        <button>Sign UP</button>
+        <a id="forgot" class="aa">Forgot Your Password?</a>
+>>>>>>> eccc61e8ff8668c137b5b1ecd2c399e2e9d8becd
       </div>
     </div>
   </center>
   <!-- login ends -->
+<<<<<<< HEAD
     </div>
     
     <!--Waves Container-->
@@ -134,3 +145,102 @@
         </section>
       </footer>
 {% endblock content %}      
+=======
+ 
+ <!-- login ends -->
+   </div>
+   
+   <!--Waves Container-->
+   <div>
+      
+   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+   <defs>
+   <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+   </defs>
+   <g class="parallax">
+   <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+   <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+   <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+   <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+   </g>
+   </svg>
+   
+   </div>
+   <!--Waves end-->
+   
+   </div>
+   <!--Header ends-->
+   
+<!--Footer-->
+<footer>
+ <section id="side1">
+   <h3>Side 1</h3>
+   <ol>
+     <li>Down to the Wire</li>
+     <li>Burned</li>
+     <li>Mr. Soul</li>
+     <li>Broken Arrow</li>
+     <li>Expecting to Fly</li>
+     <li>Sugar Mountain</li>
+   </ol>
+ </section>
+ <section id="side2">
+   <h3>Side 2</h3>
+   <ol>
+     <li>I Am a Child</li>
+     <li>The Loner</li>
+     <li>The Old Laughing Lady</li>
+     <li>Cinnamon Girl</li>
+     <li>Down by the River</li>
+   </ol>
+ </section>
+ <section id="side3">
+   <h3>Side 3</h3>
+   <ol>
+     <li>Cowgirl in the Sand</li>
+     <li>I Believe in You</li>
+     <li>After the Gold Rush</li>
+     <li>Southern Man</li>
+     <li>Helpless</li>
+   </ol>
+ </section>
+ <section id="side4">
+   <h3>Side 4</h3>
+   <ol>
+     <li>Ohio</li>
+     <li>Soldier</li>
+     <li>Old Man</li>
+     <li>A Man Needs a Maid</li>
+     <li>Harvest</li>
+     <li>Heart of Gold</li>
+     <li>Star of Bethlehem</li>
+   </ol>
+ </section>
+ <section id="side5">
+   <h3>Side 5</h3>
+   <ol>
+     <li>The Needle and the Damage Done</li>
+     <li>Tonight’s the Night (Part&nbsp;1)</li>
+     <li>Tired Eyes</li>
+     <li>Walk On</li>
+     <li>For the Turnstiles</li>
+     <li>Winterlong</li>
+     <li>Deep Forbidden Lake</li>
+   </ol>
+ </section>
+ <section id="side6">
+   <h3>Side 6</h3>
+   <ol>
+     <li>Like a Hurricane</li>
+     <li>Love Is a Rose</li>
+     <li>Cortez the Killer</li>
+     <li>Campaigner</li>
+     <li>Long May You Run</li>
+   </ol>
+ </section>
+</footer>
+
+   </body>
+   </html>
+>>>>>>> eccc61e8ff8668c137b5b1ecd2c399e2e9d8becd
