@@ -3,7 +3,8 @@
 body {
   margin:0;
   background-image: url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
+  
 }
 
 h1 {
@@ -23,15 +24,21 @@ p {
 
   position:relative;
   text-align:center;
-  background-color: #000;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
 }
 
 .inner-header {
   height:65vh;
   width:100%;
-  margin-top: 20px;
+  margin: 0;
   padding: 0;
-  background-image: url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500);
+
 }
 
 .flex { /*Flexbox for containers*/
@@ -235,14 +242,13 @@ animation: shake 0.5s ease-in-out;
 
 .container {
 	width: 100%;
+	min-height:420px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 630px;
-	height: 70vh;
-  margin-top: 20px;
+	height: 78vh;
 }
-
 
 .banner {
   max-height:500;
@@ -626,7 +632,6 @@ html {
   padding: 5% 10%;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
 
 }
 
