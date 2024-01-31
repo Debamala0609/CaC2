@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.shortcuts import render , redirect
 from django.contrib.auth import authenticate , login , logout
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User         
 from Christcourier.models import New_User
 
 
@@ -21,7 +21,7 @@ def index(request):
 def service(request):
     return render(request,"user/service.html")
 
-def about(request):
+def about(request):  
     return render(request,"user/about.html")
 
 def contact(request):
@@ -53,7 +53,12 @@ def register(request):
 
 def dashboard(request):
     return render(request,"dashboard.html")
+
 def  staff(request):
     return render(request,"staff.html")
+
 def staffreg(request):
     return render(request,"staffreg.html")
+
+def adashboard(request):
+    return render(request,"admin/adashboard,html")
