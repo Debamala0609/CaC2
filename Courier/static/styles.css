@@ -202,9 +202,7 @@ a.hover:hover {
 }
 
 .banner {
-  max-height:500;
 	height: 100%;
-	width: 350px;
 	background: rgb(0, 0, 0, 0.3);
 	border-radius: 10px 0 0 10px;
 	transition: .4s;
@@ -727,3 +725,5 @@ footer ol, footer li
   margin: 0;
   padding: 0;
 }
+
+
