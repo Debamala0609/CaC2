@@ -1,31 +1,8 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {%block content%}
 
-
-</head>
-<body >
-  <div class="header">   
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-        <i class="fa fa-bars"
-        style="font-size:32px;">
-     </i>   
-    </label>
-    <label class="logo">CourierConnecT</label>
-    <ul> 
-      <li><a class="active" href="{% url 'index' %}">Home</a></li>
-      <li><a class= "hover" href="{% url 'about' %}">About</a></li>
-      <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
-      <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
-      
-      <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
-   </nav> 
-  </div>
-   
  <!--Content before waves-->
  <div class="inner-header flex">
   <!--log in-->
@@ -51,7 +28,6 @@
    </div>
    
    <!--Waves Container-->
-   <div>
       
    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
