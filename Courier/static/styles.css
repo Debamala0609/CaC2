@@ -1,10 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
-  margin:0;
-  background-image: url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500);
-  background-repeat: no-repeat;
-  
+ background-color:#000;
 }
 
 h1 {
@@ -20,18 +17,13 @@ p {
   color: #333333;
 }
 
-.header {
+header {
 
   position:relative;
   text-align:center;
+  background-color: #000;
 }
-.logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
-}
+
 
 .inner-header {
   height:65vh;
@@ -107,130 +99,90 @@ p {
   }
 }
 /** nav bar**/
-nav {
-  background: linear-gradient(60deg, rgba(143, 41, 211, 0) 0%, rgba(1, 1, 143, 0) 100%);
-  height: 80px;
-  width: 100%;
-}
-
 label.logo {
-    color: azure;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 20px; /* Adjusted padding for responsiveness */
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    float: left;
+  color: azure;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 20px; /* Adjusted padding for responsiveness */
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  float:left;
+  
 }
 
-nav ul {
-    float: right;
-    margin-right: 5px;
+a {
+  color: #333;
+  text-decoration: none;
 }
 
-nav ul li {
-    display: inline;
-    line-height: 90px;
-    margin: 0 20px; /* Adjusted margin for responsiveness */
+
+nav a:hover {
+  color:rgb(157, 157, 255);;
+  border-bottom: 1px solid rgb(31, 31, 32);
+  transition: 0.5s;
+  
 }
 
-nav ul li a {
-    color: #fff;
-    font-size: 17px;
-    text-transform: uppercase;
-    padding: 7px 13px;
-    border-radius: 4px;
+
+nav {
+  width: 60%;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  border-radius: 4px;
+  
 }
 
-a.active,
+
+
+nav a {
+  display: block;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 4px;
+}
+
 a.hover:hover {
     background-color: rgb(31, 31, 32);
     transition: 0.5s;
 }
 
-.checkbtn {
-    font-size: 30px;
-    color: #fffbfb;
-    float: right;
-    line-height: 80px;
-    margin-right: 20px; /* Adjusted margin for responsiveness */
-    cursor: pointer;
+
+@media screen and (max-width: 768px) {
+  div#logo-container {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav {
+    width: 80%;
+  }
 }
 
-#check {
-    display: none;
+@media screen and (max-width: 480px) {
+  nav {
+    flex-direction: column
+  }
+  nav a {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+  margin-right: 5px;
+    
+  }
 }
 
-@media (max-width: 952px) {
-    label.logo {
-        font-size: 30px;
-        padding-left: 20px; /* Adjusted padding for responsiveness */
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 858px) {
-    .checkbtn {
-        display: block;
-    }
-
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: rgba(107, 107, 131, 0.8); /* Transparent background */
-        top: 80px;
-        left: 0;
-        transition: all 0.5s;
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 20px 0; /* Adjusted margin for responsiveness */
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-}
-
-.dropbtn {
-  color: white;
- background-color: rgb(31, 31, 32);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-
-
-@keyframes shake {
-0%, 100% {
-    transform: translateX(0);
-}
-10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
-}
-20%, 40%, 60%, 80% {
-    transform: translateX(10px);
-}
-}
-
-.shake-effect:hover {
-animation: shake 0.5s ease-in-out;
-}
 /* Log in */
+
+
 
 ::-webkit-scrollbar{
 	display: none;
@@ -359,9 +311,7 @@ button {
   box-sizing: inherit;
 }
 
-html {
-  font-size: 48.5%;
-}
+
 
 
 .grids {
