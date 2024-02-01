@@ -7,6 +7,14 @@ class New_User(models.Model):
     phone=models.CharField(max_length=200)
     reg_no=models.CharField(max_length=200)
 
+# class P_Details(models.Model):
+#     rec_email=models.CharField(max_length=200)
+#     rec_name=models.CharField(max_length=200)
+#     rec_phone=models.CharField(max_length=200)
+#     rec_no=models.CharField(max_length=200)
+
+
+
 
     
 
