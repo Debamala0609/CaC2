@@ -16,7 +16,7 @@
      <form class="form" method="post">
       {% csrf_token %}
        <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
-       Need an Account? <a href="{% url 'reg' %}" >Sign Up</a>
+       Need an Account? <a  class="aa" href="{% url 'reg' %}" >Sign Up</a>
        <input type="email" autocomplete placeholder="Email" id="Email" name="Email">
        <input type="password" placeholder="Password" id="pass" name="pass">
        <button type="submit">Sign In</button>
