@@ -7,6 +7,24 @@
 
 </head>
 <body >
+  <div class="header">   
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"
+        style="font-size:32px;">
+     </i>   
+    </label>
+    <label class="logo">CourierConnecT</label>
+    <ul> 
+      <li><a class="active" href="{% url 'index' %}">Home</a></li>
+      <li><a class= "hover" href="{% url 'about' %}">About</a></li>
+      <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
+      <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
+      
+      <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
+   </nav> 
+  </div>
    
  <!--Content before waves-->
  <div class="inner-header flex">
@@ -18,14 +36,15 @@
        <h3>Here's the information, about your company, product, I don't know.</h3>
        <h3>Feel free!</h3>
      </div>
-     <div class="form">
+     <form class="form" method="post">
+      {% csrf_token %}
        <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
-       <small>Need an Account? <a class="aa" herf="{% url 'contact' %}" > Sign Up</a></small>
-       <input type="email" autocomplete placeholder="Email">
-       <input type="password" placeholder="Password">
-       <button>Sign In</button>
+       Need an Account? <a href="{% url 'reg' %}" >Sign Up</a>
+       <input type="email" autocomplete placeholder="Email" id="Email" name="Email">
+       <input type="password" placeholder="Password" id="pass" name="pass">
+       <button type="submit">Sign In</button>
        <a id="forgot" class="aa">Forgot Your Password?</a>
-     </div>
+     </form>
    </div>
  </center>
  <!-- login ends -->

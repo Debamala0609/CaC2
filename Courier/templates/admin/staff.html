@@ -1,8 +1,7 @@
+{%extends 'base.html'%}
+
 {% load static %}
-<head>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-  </head>
-  <div class="header">  
+{%block content%}
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -41,4 +40,4 @@
       <div id="credit">
           <a href="">&copy;</a>
       </div>
-  </body>
+      {% endblock content%}
