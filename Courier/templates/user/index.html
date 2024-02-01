@@ -1,28 +1,8 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {%block content%}
 
-  <div class="header">   
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-        <i class="fa fa-bars"
-        style="font-size:32px;">
-     </i>   
-    </label>
-    <label class="logo">CourierConnecT</label>
-    <ul> 
-      <li><a class="active" href="{% url 'index' %}">Home</a></li>
-      <li><a class= "hover" href="{% url 'about' %}">About</a></li>
-      <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
-      <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
-      
-      <li><a href="{% url 'reci' %}" class="dropbtn shake-effect">Track Order</a></li>
-   </nav> 
-  </div>
-   
  <!--Content before waves-->
  <div class="inner-header flex">
   <!--log in-->
@@ -36,7 +16,7 @@
      <form class="form" method="post">
       {% csrf_token %}
        <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
-       Need an Account? <a href="{% url 'reg' %}" >Sign Up</a>
+       Need an Account? <a  class="aa" href="{% url 'reg' %}" >Sign Up</a>
        <input type="email" autocomplete placeholder="Email" id="Email" name="Email">
        <input type="password" placeholder="Password" id="pass" name="pass">
        <button type="submit">Sign In</button>
@@ -48,7 +28,6 @@
    </div>
    
    <!--Waves Container-->
-   <div>
       
    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -71,8 +50,8 @@
     <!-- About us-->
     <div class="about" id="about">
      <h1 style="font-weight: bolder;">About us</h1>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ipsam labore quos quam, tempora recusandae nemo laudantium, ad vitae vel repellendus dolores placeat. Velit distinctio natus, facilis quia! Voluptas nam, animi quidem doloremque mollitia accusamus voluptatum quos totam consequatur. Temporibus rerum recusandae nobis vel architecto beatae esse facilis repellat. Et repellat similique ad ab harum doloribus dolorum. Iste suscipit blanditiis vero qui aliquid omnis quasi, delectus vel adipisci et ratione maiores soluta facilis earum voluptate.</p>
-     <div class="btn"><a href="#">Learn More</a></div>
+     <p>Christ Deemed To Be Univesity,Lavasa we understand the importance of seamless communication and efficient logistics within our campus. Introducing Christ Courier Connect, a dedicated courier delivery system tailored to meet the unique needs of our college community.</p>
+     <div class="btn"> <a class= "hover" href="{% url 'about' %}">Learn More</a></div>
    </div>  
    <!-- container-->
    <div class="grids">
@@ -80,9 +59,9 @@
        <div class="card">
          <div class="card__side card__side--front" id="front-1">
            <div class="text-box">
-             <h3 class="text-box-top">Flipping Cards</h3>
-             <h1 class="text-box-middle">Awesome!</h1>
-             <h3 class="text-box-lower">--- More Text ---</h3>
+             <h3 class="text-box-top">Swift and Secure Handaling</h3>
+             <h1 class="text-box-middle">Service..</h1>
+             <h3 class="text-box-lower">Ensure timely and secure delivery of documents and packages across the campus</h3>
            </div>
          </div>
          <div class="card__side card__side--back" id="back-1">
@@ -98,9 +77,9 @@
        <div class="card">
          <div class="card__side card__side--front" id="front-2">
            <div class="text-box">
-             <h3 class="text-box-top">Flipping Cards</h3>
-             <h1 class="text-box-middle">Awesome!</h1>
-             <h3 class="text-box-lower">--- More Text ---</h3>
+             <h3 class="text-box-top">Easy and Convenient.</h3>
+             <h1 class="text-box-middle">Excellence</h1>
+             <h3 class="text-box-lower"> Users can effortlessly place, track, and manage their courier requests</h3>
            </div>
          </div>
          <div class="card__side card__side--back" id="back-2">
@@ -116,9 +95,9 @@
        <div class="card">
          <div class="card__side card__side--front" id="front-3">
            <div class="text-box">
-             <h3 class="text-box-top">Flipping Cards</h3>
-             <h1 class="text-box-middle">Awesome!</h1>
-             <h3 class="text-box-lower">--- More Text ---</h3>
+             <h3 class="text-box-top">Stay Informed</h3>
+             <h1 class="text-box-middle">Uprightness</h1>
+             <h3 class="text-box-lower">Know exactly where your package is in the delivery process.</h3>
            </div>
          </div>
          <div class="card__side card__side--back" id="back-3">
@@ -134,9 +113,9 @@
        <div class="card">
          <div class="card__side card__side--front" id="front-4">
            <div class="text-box">
-             <h3 class="text-box-top">Flipping Cards</h3>
-             <h1 class="text-box-middle">Awesome!</h1>
-             <h3 class="text-box-lower">--- More Text ---</h3>
+             <h3 class="text-box-top"> From pickup to drop-off.</h3>
+             <h1 class="text-box-middle">Status..</h1>
+             <h3 class="text-box-lower">Stay in the loop every step of the way.</h3>
            </div>
          </div>
          <div class="card__side card__side--back" id="back-4">
@@ -152,9 +131,9 @@
        <div class="card">
          <div class="card__side card__side--front" id="front-5">
            <div class="text-box">
-             <h3 class="text-box-top">Flipping Cards</h3>
-             <h1 class="text-box-middle">Awesome!</h1>
-             <h3 class="text-box-lower">--- More Text ---</h3>
+             <h3 class="text-box-top">Dedicated Support</h3>
+             <h1 class="text-box-middle">Assist..</h1>
+             <h3 class="text-box-lower"> Feel free to reach out for personalized assistance</h3>
            </div>
          </div>
          <div class="card__side card__side--back" id="back-5">

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{%block content%}
+   
+    <header>
+        <h1> WELCOME TO CHRIST COURIER CONNECT</h1>
+    </header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"
+            style="font-size:32px;">
+         </i>   
+        </label>
+        <label class="logo">CourierConnecT</label>
+        <ul> 
+            <li><a class="active" href="{% url 'index' %}">Home</a></li>
+            <li><a class= "hover" href="{% url 'about' %}">About</a></li>
+            <li><a class= "hover" href="{% url 'service' %}">Services</a></li>
+            <li><a class= "hover" href="{% url 'contact' %}">contact</a></li>
+        </ul>
+       </nav> 
+       
+    <main>
+        <em class="bo">
+            <img src="https://visualpharm.com/assets/381/Admin-595b40b65ba036ed117d3b23.svg" alt="Admin logo">
+            <a href="#">Admin</a>
+        </em>
+        <em class="lo">
+            <img src="https://visualpharm.com/assets/527/Person-595b40b85ba036ed117da7ec.svg" alt="Student logo">
+            <a href="#">User</a>
+        </em>
+    </main>
+    
+    <script>
+        // JavaScript code for the letter-by-letter typewriter effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const headerText = document.querySelector('header h1');
+            const text = headerText.innerText;
+            headerText.innerHTML = ''; // Clear the text
+
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                span.style.animationDelay = `${i * 0.1}s`;
+                headerText.appendChild(span);
+            }
+        });
+    </script>
+    {% endblock content %}
