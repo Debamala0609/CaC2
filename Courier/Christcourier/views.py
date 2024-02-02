@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 from django.shortcuts import render , redirect
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.models import User         
-from Christcourier.models import New_User
+from Christcourier.models import New_User, P_Details
 
 
 def index(request):
@@ -51,8 +51,33 @@ def register(request):
     return render(request,"user/reg.html")
 
 def receive(request):
-    return render(request,"admin/receive.html")
+    
+    if request.method=="POST":
+        Id = request.POST.get('parcelId')
+        email = request.POST.get('recEmail')
+        Recname = request.POST.get('recName')
+        Recphone = request.POST.get('recContact')  # Assuming recContact is the correct name
+        Deldate = request.POST.get('delDate')
+        Company = request.POST.get('company')
+        
+        add=P_Details(
+            rec_id=Id,
+            rec_email=email,
+            rec_name=Recname,
+            rec_phone=Recphone,
+            reg_date=Deldate,
+            rec_company=Company
+        )
+        add.save()
+        # data = add.save()
+        # if data:
+    #         print("save")
+    #     else:
+    #         print("no") 
+    # else:
+    #     print("Not in Cond")           
 
+    return render(request,"admin/receive.html")
 
 def dashboard(request):
     return render(request,"user/dashboard.html")

@@ -5,8 +5,9 @@
 
     <h2>PARCEL DETAILS</h2>
 
-    <form action="/submit-delivery" method="post">
+    <form action="{% url 'receive' %}" method="post">
         <!-- Use appropriate action and method attributes based on your server-side implementation -->
+        {% csrf_token %}
 
         <label for="parcelId">Parcel ID:</label>
         <input type="text" id="parcelId" name="parcelId" required>
@@ -15,13 +16,13 @@
         <input type="text" id="senderName" name="senderName" required> {% endcomment %}
 
         <label for="senderContact">Recipient's Email:</label>
-        <input type="Email" id="senderContact" name="senderContact" required> 
+        <input type="Email" id="recEmail" name="recEmail" required> 
 
         <label for="recipientName">Recipient's Name:</label>
         <input type="text" id="recName" name="recName" required>
 
         <label for="recipientContact">Recipient's Contact:</label>
-        <input type="Phone" id="recContact" name="recContact" required>
+        <input type="number" id="recContact" name="recContact" required>
 
         <label for="deliveryDate">Expected Delivery Date:</label>
         <input type="date" id="delDate" name="delDate" required>
@@ -32,14 +33,14 @@
             <option value="flipkart">Flipkart</option>
             <option value="myntra">Myntra</option>
             <option value="nykaa">Nykaa</option>
-            <option value="nykaa">Meesho</option>
-            <option value="nykaa">Others</option>
+            <option value="meesho">Meesho</option>
+            <option value="others">Others</option>
             <!-- Add more options as needed -->
         </select>
 
-        <label for="additionalNotes">Additional Notes:</label>
-        <textarea id="additionalNotes" name="additionalNotes" rows="4"></textarea>
+        {% comment %} <label for="additionalNotes">Additional Notes:</label>
+        <textarea id="additionalNotes" name="additionalNotes" rows="4"></textarea> {% endcomment %}
 
-        <button type="submit">Submit Delivery Details</button>
+        <button type="submit">Add Parcel Details</button>
     </form>
     {% endblock content%}
