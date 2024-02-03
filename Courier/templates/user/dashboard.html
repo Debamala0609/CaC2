@@ -2,8 +2,8 @@
 
 {% load static %}
 {% block content %}
-    <!-- for header part -->
-    <header>
+     <!-- for header part -->
+     <header>
 
         <div class="logosec">
             <div class="logo">CourierConnecT</div>
@@ -41,36 +41,33 @@
                     </div>
 
                     <div class="option2 nav-option">
-
-                        <li><a href="{% url 'receive' %}">ADD PARCEL DETAILS</a></li>
-                    </div>
-
-                    <div class="option2 nav-option2">
-
                         <li><a href="#">Package Status</a></li>
                     </div>
 
                     <div class="nav-option option3">
 
-                        <li><a href="receive.html">Receive Status</a></li>
+                        <li><a href="parcelentry.html">Package Entry</a></li>
                     </div>
 
                     <div class="nav-option option4">
-                        <li><a href="return.html">Return Status</a></li>
+
+                        <li><a href="parcelreturn.html">Package Return</a></li>
                     </div>
 
                     <div class="nav-option option5">
 
-                        <li><a href="#">Report</a></li>
+                        <li><a href="parcelreturn.html">Report</a></li>
                     </div>
 
                     <div class="nav-option option6">
-                        <li><a href="#">Settings</a></li>
+
+                        <h3> Social Media</h3>
                     </div>
 
                     <div class="nav-option logout">
+                        <li><a class="active" href="index.html">Log Out</a></li>
 
-                        <h3>Logout</h3>
+                        
                     </div>
 
                 </div>
@@ -210,27 +207,14 @@
             </div>
         </div>
     </div>
-    <script>
+     <script>
+        
         let menuicn = document.querySelector(".menuicn"); 
-let nav = document.querySelector(".navcontainer"); 
+        let nav = document.querySelector(".navcontainer"); 
+        
+        menuicn.addEventListener("click", () => { 
+            nav.classList.toggle("navclose"); 
+        })
 
-menuicn.addEventListener("click", () => { 
-	nav.classList.toggle("navclose"); 
-})
-// view all 
-
- document.addEventListener('DOMContentLoaded', function () {
-        // Get the button and the report body
-        var viewButton = document.querySelector('.view');
-        var reportBody = document.querySelector('.report-body');
-
-        // Add a click event listener to the button
-        viewButton.addEventListener('click', function () {
-            // Toggle the visibility of the report body
-            reportBody.classList.toggle('visible');
-        });
-    });
-
-
-    </script>
+     </script>
     {% endblock content %}

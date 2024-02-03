@@ -12,7 +12,7 @@ def index(request):
         user = authenticate(request,username=Email,password=pass1)
         if user is not None:
             login(request,user)
-            return redirect('reci')
+            return redirect('dashboard')
         else:
             return render(request,"user/index.html")
     return render(request,"user/index.html")
@@ -28,7 +28,7 @@ def contact(request):
     return render(request,"user/contact.html")
 
 def reci(request):
-    return render(request,"user/reci.html")
+    return render(request,"user/dashboard.html")
 
 def register(request):
     if request.method == 'POST':
