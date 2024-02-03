@@ -83,6 +83,15 @@ def dashboard(request):
     return render(request,"user/dashboard.html")
 
 def stafflogin(request):
+    if request.method == 'POST':
+        EmaiL = request.POST.get('emaiL')
+        Pass1 = request.POST.get('pasS')
+        staff = authenticate(request,username=EmaiL,password=Pass1)
+        if user is not None:
+            login(request,staff)
+            return redirect('sdashboard')
+        else:
+            return render(request,"admin/stafflogin.html")
     return render(request,"admin/stafflogin.html")
 
 def staffreg(request):
