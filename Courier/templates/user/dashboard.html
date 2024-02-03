@@ -23,8 +23,9 @@
             <div class="circle"></div>
             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="">
             <div class="dp">
+                <a href="{% url 'contact'%}"> 
                 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
-                    class="dpicn" alt="dp">
+                    class="dpicn" alt="dp"></a>
             </div>
         </div>
 
@@ -47,23 +48,23 @@
                     <div class="option2 nav-option">
                         <li><a href="#">Package Status</a></li>
                     </div>
-
+{% comment %} 
                     <div class="nav-option option3">
 
                         <li><a href="parcelentry.html">Package Entry</a></li>
-                    </div>
+                    </div> {% endcomment %}
 
                     <div class="nav-option option4">
 
                         <li><a href="parcelreturn.html">Package Return</a></li>
                     </div>
 
-                    <div class="nav-option option5">
+                    {% comment %} <div class="nav-option option5">
 
                         <li><a href="parcelreturn.html">Report</a></li>
-                    </div>
+                    </div> {% endcomment %}
 
-                    <div class="nav-option option6">
+                    {% comment %} <div class="nav-option option6">
 
                         <h3> Social Media</h3>
                     </div>
@@ -72,7 +73,7 @@
                         <li><a class="active" href="index.html">Log Out</a></li>
 
                         
-                    </div>
+                    </div> {% endcomment %}
 
                 </div>
             </nav>

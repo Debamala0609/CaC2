@@ -77,16 +77,16 @@ def receive(request):
     # else:
     #     print("Not in Cond")           
 
-    return render(request,"admin/receive.html")
+    return render(request,"user/receive.html")
 
 def dashboard(request):
     return render(request,"user/dashboard.html")
 
-def  staff(request):
-    return render(request,"staff.html")
+def stafflogin(request):
+    return render(request,"admin/stafflogin.html")
 
 def staffreg(request):
-    return render(request,"staffreg.html")
+    return render(request,"admin/staffreg.html")
 
-def adashboard(request):
-    return render(request,"admin/adashboard,html")
+def sdashboard(request):
+    return render(request,"admin/sdashboard.html")
