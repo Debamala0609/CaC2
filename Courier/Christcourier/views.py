@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 from django.shortcuts import render , redirect
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.models import User         
-from Christcourier.models import New_User, P_Details
+from Christcourier.models import New_User, P_Details,New_staff
 
 
 def index(request):
@@ -86,6 +86,24 @@ def stafflogin(request):
     return render(request,"admin/stafflogin.html")
 
 def staffreg(request):
+    if request.method=='POST':
+        NAME=request.POST.get('name')
+        EMAIL=request.POST.get('email')
+        PASS=request.POST.get('passwoard')
+
+        Staff=New_staff(
+            s_name=NAME,
+            s_email=EMAIL
+        )
+        Staff.save()
+        data = Staff.save()
+        if data:
+            print("save")
+
+        else:
+            print("NOOOOOO")                
+        return redirect('sdashboard')
+
     return render(request,"admin/staffreg.html")
 
 def sdashboard(request):

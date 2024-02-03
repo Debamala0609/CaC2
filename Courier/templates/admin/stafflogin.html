@@ -31,9 +31,10 @@
 
           <form action=# method="post" align="center">
               <h1>STAFF PANEL</h1>
+              {% csrf_token %}
               <input name="user" type="Email" placeholder="Email" id="emaiL" name="emaiL"/>
               <input name="pass" type="password" placeholder="password" id="pasS" name="pasS" />
-              <button class="btn" name="login" type="submit"><a href="{% url 'adash'  %}">Login</button>
+              <button class="btn" name="login" type="submit"><a href="{% url 'sdashboard' %}">Login</a></button>
               <button class="btn"><a href="{% url 'staffreg' %}" >Sign Up here?</a></button>
           </form>
 

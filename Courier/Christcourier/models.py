@@ -23,6 +23,10 @@ class P_Details(models.Model):
     reg_date = models.DateField()
     rec_company = models.CharField(max_length=200, choices=Company)
 
+class New_staff(models.Model):
+    s_name=models.CharField(max_length=200)
+    s_email=models.CharField(max_length=200)
+    
 
 
 
