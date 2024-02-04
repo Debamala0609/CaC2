@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 from django.shortcuts import render , redirect
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.models import User         
-from Christcourier.models import New_User
+from Christcourier.models import New_User, P_Details,New_staff
 
 
 def index(request):
@@ -12,7 +12,7 @@ def index(request):
         user = authenticate(request,username=Email,password=pass1)
         if user is not None:
             login(request,user)
-            return redirect('reci')
+            return redirect('dashboard')
         else:
             return render(request,"user/index.html")
     return render(request,"user/index.html")
@@ -28,7 +28,7 @@ def contact(request):
     return render(request,"user/contact.html")
 
 def reci(request):
-    return render(request,"user/reci.html")
+    return render(request,"user/dashboard.html")
 
 def register(request):
     if request.method == 'POST':
@@ -51,17 +51,69 @@ def register(request):
     return render(request,"user/reg.html")
 
 def receive(request):
-    return render(request,"admin/receive.html")
+    
+    if request.method=="POST":
+        Id = request.POST.get('parcelId')
+        email = request.POST.get('recEmail')
+        Recname = request.POST.get('recName')
+        Recphone = request.POST.get('recContact')  # Assuming recContact is the correct name
+        Deldate = request.POST.get('delDate')
+        Company = request.POST.get('company')
+        
+        add=P_Details(
+            rec_id=Id,
+            rec_email=email,
+            rec_name=Recname,
+            rec_phone=Recphone,
+            reg_date=Deldate,
+            rec_company=Company
+        )
+        add.save()
+        # data = add.save()
+        # if data:
+    #         print("save")
+    #     else:
+    #         print("no") 
+    # else:
+    #     print("Not in Cond")           
 
+    return render(request,"user/receive.html")
 
 def dashboard(request):
     return render(request,"user/dashboard.html")
 
-def  staff(request):
-    return render(request,"staff.html")
+def stafflogin(request):
+    if request.method == 'POST':
+        EmaiL = request.POST.get('emaiL')
+        Pass1 = request.POST.get('pasS')
+        staff = authenticate(request,username=EmaiL,password=Pass1)
+        if user is not None:
+            login(request,staff)
+            return redirect('sdashboard')
+        else:
+            return render(request,"admin/stafflogin.html")
+    return render(request,"admin/stafflogin.html")
 
 def staffreg(request):
-    return render(request,"staffreg.html")
+    if request.method=='POST':
+        NAME=request.POST.get('name')
+        EMAIL=request.POST.get('email')
+        PASS=request.POST.get('passwoard')
 
-def adashboard(request):
-    return render(request,"admin/adashboard,html")
+        Staff=New_staff(
+            s_name=NAME,
+            s_email=EMAIL
+        )
+        Staff.save()
+        data = Staff.save()
+        if data:
+            print("save")
+
+        else:
+            print("NOOOOOO")                
+        return redirect('sdashboard')
+
+    return render(request,"admin/staffreg.html")
+
+def sdashboard(request):
+    return render(request,"admin/sdashboard.html")

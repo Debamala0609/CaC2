@@ -10,14 +10,14 @@
    <center>
     <div class="container">
       <div class="banner">
-        <button type="submit" style="margin-top: 50;"><a href="{% url 'dashboard'%}">MY PROFILE </button>
+        {% comment %} <button type="submit" style="margin-top: 50;"><a href="{% url 'dashboard'%}">MY PROFILE </button> {% endcomment %}
         {% comment %} <h3>Here's the information, about your company, product, I don't know.</h3>
         <h3>Feel free!</h3> {% endcomment %}
       </div>
       <div class="form">
         <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70" style="margin-top: 50;">
         <input type="text" autocomplete placeholder="Registration Number"  style="margin-top: 50;">
-        <button style="margin-top: 50;">Track Order</button>
+        <button type="submit" style="margin-top: 50;"><a href="{% url 'dashboard'%}">MY PROFILE </button>
 
       </div>
 

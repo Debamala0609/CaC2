@@ -2,7 +2,7 @@
 
 {% load static %}
 {%block content%}
-  <nav>
+  {% comment %} <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
         <i class="fa fa-bars"
@@ -25,19 +25,22 @@
           </div>
         </li>
     </ul>
-   </nav> 
+   </nav>  {% endcomment %}
    <center>
    <div id="login">
-          <form action="login.php" method="post" align="center">
-              <h1>[ Admin Panel ]</h1>
-              <input name="user" type="text" placeholder="register" />
-              <input name="pass" type="password" placeholder="passcode" />
-              <button class="btn" name="login" type="submit">login</button>
-              <button class="btn">forgot?</button>
+
+          <form action=# method="post" align="center">
+              <h1>STAFF PANEL</h1>
+              {% csrf_token %}
+              <input name="user" type="Email" placeholder="Email" id="emaiL" name="emaiL"/>
+              <input name="pass" type="password" placeholder="password" id="pasS" name="pasS" />
+              <button class="btn" name="login" type="submit"><a href="{% url 'sdashboard' %}">Login</a></button>
+              <button class="btn"><a href="{% url 'staffreg' %}" >Sign Up here?</a></button>
           </form>
+
    </div>
    </center>
       <div id="credit">
           <a href="">&copy;</a>
       </div>
-      {% endblock content%}
+{% endblock content%}

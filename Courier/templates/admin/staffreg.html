@@ -3,7 +3,7 @@
 
 {% load static %}
 {%block content%}
-    <nav>
+    {% comment %} <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fa fa-bars" style="font-size:32px;">
@@ -25,15 +25,14 @@
                 </div>
             </li>
         </ul>
-    </nav>
-</head>
+    </nav> {% endcomment %}
 
 <body class="b">'
     <center>
         <div>
-            <form action="process_registration.php" method="POST" class="registration-form">
+            <form action="#" method="POST" class="registration-form">
                 <h2>Staff Registration</h2>
-
+                {% csrf_token %}
                 <label for="name"><h5>Full Name:</h5></label>
                 <input type="text" id="name" name="name" required>
 
@@ -43,10 +42,10 @@
                 <label for="password"><h5>Password:</h5></label>
                 <input type="password" id="password" name="password" required>
 
-                <label for="department"><h5>Department:</h5></label>
-                <input type="text" id="department" name="department" required>
+                {% comment %} <label for="department"><h5>Department:</h5></label>
+                <input type="text" id="department" name="department" required> {% endcomment %}
                 
-            <button type="submit" class="register">Register</button>
+            <button type="submit" class="register"><a href="{% url 'stafflogin' %}" >Register</button>
 
             </form>
         </div>
