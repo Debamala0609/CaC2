@@ -117,3 +117,5 @@ def staffreg(request):
 
 def sdashboard(request):
     return render(request,"admin/sdashboard.html")
+def pstatus(request):
+    return render(request,"admin/pstatus.html")
