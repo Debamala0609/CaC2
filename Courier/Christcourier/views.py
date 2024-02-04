@@ -50,9 +50,12 @@ def register(request):
         return redirect('index')    
     return render(request,"user/reg.html")
 
+def receive(request):
+    return render(request,"admin/receive.html")
+
 
 def dashboard(request):
-    return render(request,"dashboard.html")
+    return render(request,"user/dashboard.html")
 
 def  staff(request):
     return render(request,"staff.html")

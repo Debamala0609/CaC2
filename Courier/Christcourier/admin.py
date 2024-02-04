@@ -6,3 +6,6 @@ class Admin(admin.ModelAdmin):
     list_display=('email','name','phone','reg_no')
 
 admin.site.register(New_User,Admin)
+
+# class Rec(rec.ModelRec):
+#     list_display=('')

@@ -3,7 +3,7 @@
 {% load static %}
 {%block content%}
 
-    <h2>Parcel Delivery Entry</h2>
+    <h2>PARCEL DETAILS</h2>
 
     <form action="/submit-delivery" method="post">
         <!-- Use appropriate action and method attributes based on your server-side implementation -->
@@ -11,20 +11,20 @@
         <label for="parcelId">Parcel ID:</label>
         <input type="text" id="parcelId" name="parcelId" required>
 
-        <label for="senderName">Sender's Name:</label>
-        <input type="text" id="senderName" name="senderName" required>
+        {% comment %} <label for="senderName">Sender's Name:</label>
+        <input type="text" id="senderName" name="senderName" required> {% endcomment %}
 
-        <label for="senderContact">Sender's Contact:</label>
-        <input type="tel" id="senderContact" name="senderContact" required>
+        <label for="senderContact">Recipient's Email:</label>
+        <input type="Email" id="senderContact" name="senderContact" required> 
 
         <label for="recipientName">Recipient's Name:</label>
-        <input type="text" id="recipientName" name="recipientName" required>
+        <input type="text" id="recName" name="recName" required>
 
         <label for="recipientContact">Recipient's Contact:</label>
-        <input type="tel" id="recipientContact" name="recipientContact" required>
+        <input type="Phone" id="recContact" name="recContact" required>
 
-        <label for="deliveryDate">Delivery Date:</label>
-        <input type="date" id="deliveryDate" name="deliveryDate" required>
+        <label for="deliveryDate">Expected Delivery Date:</label>
+        <input type="date" id="delDate" name="delDate" required>
 
         <label for="company">Select Company:</label>
         <select id="company" name="company" required>
@@ -32,6 +32,7 @@
             <option value="flipkart">Flipkart</option>
             <option value="myntra">Myntra</option>
             <option value="nykaa">Nykaa</option>
+            <option value="nykaa">Meesho</option>
             <option value="nykaa">Others</option>
             <!-- Add more options as needed -->
         </select>
