@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% load static %}
 
@@ -9,9 +10,8 @@
   <center>
    <div class="container">
      <div class="banner">
-       <h1>YOUR TEXT HERE</h1>
-       <h3>Here's the information, about your company, product, I don't know.</h3>
-       <h3>Feel free!</h3>
+       <h1>Unleash the potential, inspire the extraordinary</h1>
+       <h3>"Welcome to Christ University's Cutting-Edge Courier Management System. Streamlining delivery for both staff and students, our user-friendly website ensures swift and secure parcel services. Join us in fostering seamless connections and efficient deliveries across the campus community. Your parcels, our priority – delivering excellence at every doorstep."</h3>
      </div>
      <form class="form" method="post">
       {% csrf_token %}
@@ -20,8 +20,8 @@
        <input type="email" autocomplete placeholder="Email" id="Email" name="Email">
        <input type="password" placeholder="Password" id="pass" name="pass">
        <button type="submit">Log In</button>
-       <a id="forgot" class="aa">Forgot Your Password?</a>
-       <a class= "hover" href= "{% url 'stafflogin' %}">STAFF LOGIN here </a>
+       {% comment %} <a id="forgot" class="aa" href="{% url 'forgot_password' %}">Forgot Your Password?</a> {% endcomment %}
+       {% comment %} <a class= "hover" href= "{% url 'stafflogin' %}">STAFF LOGIN here </a> {% endcomment %}
      </form>
    </div>
  </center>
@@ -58,14 +58,14 @@
    <div class="grids">
      <div class="card-one">
        <div class="card">
-         <div class="card__side card__side--front" id="front-1">
+         <div class="card_side card_side--front" id="front-1">
            <div class="text-box">
              <h3 class="text-box-top">Swift and Secure Handaling</h3>
              <h1 class="text-box-middle">Service..</h1>
              <h3 class="text-box-lower">Ensure timely and secure delivery of documents and packages across the campus</h3>
            </div>
          </div>
-         <div class="card__side card__side--back" id="back-1">
+         <div class="card_side card_side--back" id="back-1">
            <div class="text-box">
              <h3 class="text-box-top">Cards Flipped</h3>
              <h1 class="text-box-middle">Great!</h1>
@@ -76,14 +76,14 @@
      </div>
      <div class="card-two">
        <div class="card">
-         <div class="card__side card__side--front" id="front-2">
+         <div class="card_side card_side--front" id="front-2">
            <div class="text-box">
              <h3 class="text-box-top">Easy and Convenient.</h3>
              <h1 class="text-box-middle">Excellence</h1>
              <h3 class="text-box-lower"> Users can effortlessly place, track, and manage their courier requests</h3>
            </div>
          </div>
-         <div class="card__side card__side--back" id="back-2">
+         <div class="card_side card_side--back" id="back-2">
            <div class="text-box">
              <h3 class="text-box-top">Cards Flipped</h3>
              <h1 class="text-box-middle">Great!</h1>
@@ -94,14 +94,14 @@
      </div>
      <div class="card-three">
        <div class="card">
-         <div class="card__side card__side--front" id="front-3">
+         <div class="card_side card_side--front" id="front-3">
            <div class="text-box">
              <h3 class="text-box-top">Stay Informed</h3>
              <h1 class="text-box-middle">Uprightness</h1>
              <h3 class="text-box-lower">Know exactly where your package is in the delivery process.</h3>
            </div>
          </div>
-         <div class="card__side card__side--back" id="back-3">
+         <div class="card_side card_side--back" id="back-3">
            <div class="text-box">
              <h3 class="text-box-top">Cards Flipped</h3>
              <h1 class="text-box-middle">Great!</h1>
@@ -112,14 +112,14 @@
      </div>
      <div class="card-four">
        <div class="card">
-         <div class="card__side card__side--front" id="front-4">
+         <div class="card_side card_side--front" id="front-4">
            <div class="text-box">
              <h3 class="text-box-top"> From pickup to drop-off.</h3>
              <h1 class="text-box-middle">Status..</h1>
              <h3 class="text-box-lower">Stay in the loop every step of the way.</h3>
            </div>
          </div>
-         <div class="card__side card__side--back" id="back-4">
+         <div class="card_side card_side--back" id="back-4">
            <div class="text-box">
              <h3 class="text-box-top">Cards Flipped</h3>
              <h1 class="text-box-middle">Great!</h1>
@@ -130,14 +130,14 @@
      </div>
      <div class="card-five">
        <div class="card">
-         <div class="card__side card__side--front" id="front-5">
+         <div class="card_side card_side--front" id="front-5">
            <div class="text-box">
              <h3 class="text-box-top">Dedicated Support</h3>
              <h1 class="text-box-middle">Assist..</h1>
              <h3 class="text-box-lower"> Feel free to reach out for personalized assistance</h3>
            </div>
          </div>
-         <div class="card__side card__side--back" id="back-5">
+         <div class="card_side card_side--back" id="back-5">
            <div class="text-box">
              <h3 class="text-box-top">Cards Flipped</h3>
              <h1 class="text-box-middle">Great!</h1>
@@ -153,9 +153,8 @@
    <h1 style="font-weight: bolder; color: #fff;"> Contact Us </h1><br>
    <div class="container" >
      <div class="banner">
-       <h1>YOUR TEXT HERE</h1>
-       <h3>Here's the information, about your company, product, I don't know.</h3>
-       <h3>Feel free!</h3>
+       <h1>"Connect with Us"</h1>
+       <h3>Have a question, feedback, or need assistance? We're here to help! Reach out to the Christ University Courier Management team for any inquiries related to our services. Your satisfaction is our priority.</h3>
      </div>
    <div class="form" style="border: 2px solid rgb(31,31,32);">
      <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
@@ -167,74 +166,6 @@
  </div>
 </div>
 </center>
-<!--social icon-->
 
-<!--Footer-->
-<footer>
- <section id="side1">
-   <h3>Side 1</h3>
-   <ol>
-     <li>Down to the Wire</li>
-     <li>Burned</li>
-     <li>Mr. Soul</li>
-     <li>Broken Arrow</li>
-     <li>Expecting to Fly</li>
-     <li>Sugar Mountain</li>
-   </ol>
- </section>
- <section id="side2">
-   <h3>Side 2</h3>
-   <ol>
-     <li>I Am a Child</li>
-     <li>The Loner</li>
-     <li>The Old Laughing Lady</li>
-     <li>Cinnamon Girl</li>
-     <li>Down by the River</li>
-   </ol>
- </section>
- <section id="side3">
-   <h3>Side 3</h3>
-   <ol>
-     <li>Cowgirl in the Sand</li>
-     <li>I Believe in You</li>
-     <li>After the Gold Rush</li>
-     <li>Southern Man</li>
-     <li>Helpless</li>
-   </ol>
- </section>
- <section id="side4">
-   <h3>Side 4</h3>
-   <ol>
-     <li>Ohio</li>
-     <li>Soldier</li>
-     <li>Old Man</li>
-     <li>A Man Needs a Maid</li>
-     <li>Harvest</li>
-     <li>Heart of Gold</li>
-     <li>Star of Bethlehem</li>
-   </ol>
- </section>
- <section id="side5">
-   <h3>Side 5</h3>
-   <ol>
-     <li>The Needle and the Damage Done</li>
-     <li>Tonight’s the Night (Part&nbsp;1)</li>
-     <li>Tired Eyes</li>
-     <li>Walk On</li>
-     <li>For the Turnstiles</li>
-     <li>Winterlong</li>
-     <li>Deep Forbidden Lake</li>
-   </ol>
- </section>
- <section id="side6">
-   <h3>Side 6</h3>
-   <ol>
-     <li>Like a Hurricane</li>
-     <li>Love Is a Rose</li>
-     <li>Cortez the Killer</li>
-     <li>Campaigner</li>
-     <li>Long May You Run</li>
-   </ol>
- </section>
-</footer>
 {%endblock content%}
+

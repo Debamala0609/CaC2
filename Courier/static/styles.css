@@ -1,7 +1,8 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
- background-color:#000;
+ background-image: url(bg.jpeg);
+ background-repeat: no-repeat;
 }
 
 h1 {
@@ -617,114 +618,13 @@ button {
   /* social icon */
 /*footer*/
 
-footer::before
-{
-	background:gray;
-}
-
-
-
-footer
-{
-  margin-top: auto;
-  padding: 2em 1em 0;
-  display: flex;
-  position: relative;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: rgb(31, 31, 32);
-  color:white;
-}
-
-footer::before
-{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: calc(2em + 5vw);
-  height: calc(2em + 5vw);
-  border-radius: 0 0 calc(.2em + .5vw) 0;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-footer section
-{
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  padding: 0.75em;
+  font-size:medium;
 }
-
-@media (min-width: 20em)
-{
-  footer::after
-  {
-    content: "";
-  }
-  
-  footer section
-  {
-    width: 40%;
-  }
-  
-  footer section:first-child,
-  footer::after
-  {
-    order: -1;
-  }
-}
-
-@media (min-width: 40em)
-{
-  footer
-  {
-    padding-top: 0;
-  }
-  
-  footer::after
-  {
-    content: "";
-    width: 40%;   
-  }
-
-  footer section
-  {
-    width: 20%;
-  }
-
-  footer section:first-child,
-  footer::after
-  {
-    order: -1;
-  }
-}
-
-@media (min-width: 60em)
-{
-  footer::after,
-  footer section
-  {
-    width: 12%;
-  }
-
-  footer section:nth-child(2),
-  footer section:nth-child(3)
-  {
-    order: -1;
-  }  
-}
-
-footer h3
-{
-  margin: 0 0 0.75em;
-  font-size: 1em;
-}
-
-footer ol, footer li
-{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-

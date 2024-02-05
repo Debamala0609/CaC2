@@ -187,85 +187,60 @@
     <div class="container">
         <!--sidebar start-->
 
-        <div class="side-bar">
+        {% comment %} <div class="side-bar">
             <a href="testdashboard.html" class="nav-heading clickable">
                 <!-- Added anchor tag with href -->
                 Home
             </a>
-            <div class="nav-bar">
+             <div class="nav-bar">
                 <ul class="nav-list nav-styles">
-                    <li><a href="{% url 'recipient' %}">USERS</a></li>
-                    <li><a href="{% url 'parcel' %}">PARCEL DETAILS</a></li>
-                    <li><a href="{% url 'adminplot' %}">Dashboard</a></li>
+                    <li><a href="testgrievances.html">Grievances</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="testreports.html">Reports</a></li>
                     <li><a href="support.html">Support</a></li>
                 </ul>
             </div>
-        </div>
+        </div> {% endcomment %}
         <!--sidebar end-->
 
         <section>
-            <h2>Grievance Monitoring</h2>
+            <h2>RECIPIENT DETAILS</h2>
 
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Assigned To</th>
-                        <th>Actions</th>
+                        {% comment %} <th>PARCEL ID</th> {% endcomment %}
+                        <th>Recipient's Email</th>
+                        <th>Recipient's Name</th>
+                        <th>Recipient's Contact</th>
+                        <th>Reg. No.</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Sample data, replace with dynamic data from backend -->
                     <tr>
-                        <td>1</td>
-                        <td>Academic</td>
-                        <td>Open</td>
-                        <td>John Doe</td>
-                        <td><a href="#" class="button">View</a></td>
+                        {% for r in recipient %}
+                        <td>{{r.email}}</td>
+                        <td>{{r.name}}</td>
+                        <td>{{r.phone}}</td>
+                        <td>{{r.reg_no}}</td>
                     </tr>
-                    <tr>
+                        {% endfor %}
+                    {% comment %} <tr>
                         <td>2</td>
                         <td>Financial</td>
                         <td>Closed</td>
                         <td>Jane Smith</td>
-                        <td><a href="#" class="button">View</a></td>
-                    </tr>
+                        <td> date </td>
+                        <td></td>
+                    </tr> {% endcomment %}
                 </tbody>
             </table>
 
-            <h2>Assign Grievance</h2>
-
-            <form>
-                <label for="grievanceType">Grievance Type:</label>
-                <select id="grievanceType" name="grievanceType">
-                    <option value="academic">Academic</option>
-                    <option value="financial">Financial</option>
-                    <!-- Add more options as needed -->
-                </select>
-
-                <label for="assignTo">Assign To:</label>
-                <select id="assignTo" name="assignTo">
-                    <option value="johnDoe">John Doe</option>
-                    <option value="janeSmith">Jane Smith</option>
-                    <!-- Add more options as needed -->
-                </select>
-                
-                <label for="status">Status:</label>
-                <select id="status" name="status">
-                    <option value="Open">Open</option>
-                    <option value="Closed">Closed</option>
-                </select>
-
-                <label for="grievanceId">ID:</label>
-                <input type="text" id="grievanceId" name="grievanceId"
-
-                <input type="submit" value="Assign" class="button">
-            </form>
-        </section>
+         </section>
     </div>
-   
+    
+
     <footer>
         &copy; @Christ Courier Connect
     </footer>

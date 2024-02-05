@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import New_User,P_Details,New_staff
+from .models import New_User,P_Details,Return
 # Register your models here.
 
 class Admin(admin.ModelAdmin):
@@ -12,10 +12,9 @@ class Recipient(admin.ModelAdmin):
 
 admin.site.register(P_Details,Recipient)
 
-class Staff(admin.ModelAdmin):
-    list_display=('s_name','s_email')
+class rReturn(admin.ModelAdmin):
+    list_display=('p_id','p_otp','p_name','p_date','p_ser')
 
-admin.site.register(New_staff,Staff)  
 
 
 
