@@ -91,8 +91,8 @@ def stafflogin(request):
             login(request,staff)
             return redirect('sdashboard')
         else:
-            return render(request,"admin/stafflogin.html")
-    return render(request,"admin/stafflogin.html")
+            return render(request,"staff/stafflogin.html")
+    return render(request,"staff/stafflogin.html")
 
 def staffreg(request):
     if request.method=='POST':
@@ -113,9 +113,12 @@ def staffreg(request):
             print("NOOOOOO")                
         return redirect('sdashboard')
 
-    return render(request,"admin/staffreg.html")
+    return render(request,"staff/staffreg.html")
 
 def sdashboard(request):
-    return render(request,"admin/sdashboard.html")
+    return render(request,"staff/sdashboard.html")
 def pstatus(request):
-    return render(request,"admin/pstatus.html")
+    return render(request,"staff/pstatus.html")
+
+def admin_db(request):
+    return render(request,"admin/admin_db.html")
