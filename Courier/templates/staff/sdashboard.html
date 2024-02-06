@@ -1,168 +1,4 @@
 {%extends 'base.html'%}
-{% comment %} 
-{% load static %}
-{%block content%}
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f2f2f2;
-    }
-
-    header {
-        background-color: #007bff;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-
-    h1 {
-        margin: 0;
-    }
-
-    .top-navbar-menu {
-        list-style: none;
-        padding: 0;
-        margin: 10px 0;
-    }
-
-    .top-navbar-menu li {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
-    .top-navbar-menu a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .top-navbar-menu a:hover {
-        text-decoration: underline;
-    }
-
-    .dashboard-container {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        min-height: 100vh;
-    }
-
-    .sidebar {
-        background-color: #252b3b;
-        color: #fff;
-        padding: 20px;
-    }
-
-    .sidebar h2 {
-        margin-bottom: 20px;
-    }
-
-    .sidebar-menu {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .sidebar-menu li {
-        margin-bottom: 10px;
-    }
-
-    .sidebar-menu a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .sidebar-menu a:hover {
-        text-decoration: underline;
-    }
-
-    .main-content {
-        padding: 20px;
-    }
-
-    .section {
-        margin-bottom: 40px;
-    }
-
-    .section h2 {
-        margin-bottom: 20px;
-        color: #007bff;
-    }
-
-    .dashboard-cards {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .dashboard-card {
-        background-color: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 10px;
-        text-align: center;
-    }
-
-    .dashboard-card h3 {
-        color: #007bff;
-    }
-
-    .dashboard-card p {
-        font-size: 24px;
-        margin: 10px 0;
-    }
-</style>
-</head>
-
-<body>
-<header>
-    <h1>Staff Dashboard</h1>
-    <ul class="top-navbar-menu">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#logout">Logout</a></li>
-    </ul>
-</header>
-
-<div class="dashboard-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h2>Menu</h2>
-        <ul class="sidebar-menu">
-            
-            <a class= "hover" href="{% url 'pstatus' %}">pstatus</a> 
-            <a class= "hover" href="{% url 'contact' %}">Contact</a>
-        </ul>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="section">
-            <h2>Dashboard</h2>
-            <div class="dashboard-cards">
-                <!-- Sample Card 1 -->
-                <div class="dashboard-card">
-                    <h3>Total Parcels</h3>
-                    <p>100</p>
-                </div>
-
-                <!-- Sample Card 2 -->
-                <div class="dashboard-card">
-                    <h3>Delivered Parcels</h3>
-                    <p>75</p>
-                </div>
-
-                <!-- Sample Card 3 -->
-                <div class="dashboard-card">
-                    <h3>Pending Parcels</h3>
-                    <p>25</p>
-                </div>
-            </div>
-        </section>
-</div>
-{% endblock content %} {% endcomment %}
-{% comment %} {% extends 'base.html'%} {% endcomment %}
 
 {% load static %}
 {% block content %}
@@ -207,15 +43,15 @@
                     <div class="nav-option option1">
                         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
                             class="nav-img" alt="dashboard">
-                        <h3> Dashboard</h3>
+                        <h3> WELCOME STAFF !</h3>
                     </div>
 
                     <div class="option2 nav-option">
-                        <a href="{% url 'receive' %}">Recipients</a>
+                        <a href="{% url 'recipient' %}">Recipients</a>
                     </div>
 
                     <div class="option2 nav-option">
-                        <a href="#">Packages</a>
+                        <a href="{% url 'parcel' %}">Packages</a>
                     </div>
 {% comment %} 
                     <div class="nav-option option3">
@@ -225,7 +61,12 @@
 
                     <div class="nav-option option4">
 
-                        <a href="parcelreturn.html">Packages Return</a>
+                        <a href="{% url 'retdet' %}">Packages Return</a>
+                    </div>
+
+                    <div class="nav-option option4">
+
+                        <a href="{% url 'index' %}"> Log Out </a>
                     </div>
 
                     {% comment %} <div class="nav-option option5">
@@ -314,67 +155,12 @@
 
                     <div class="items">
                         <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl">fff</h3>
+                            <h3 class="t-op-nextlvl">thbn</h3>
                             <h3 class="t-op-nextlvl"></h3>
                             <h3 class="t-op-nextlvl label-tag"></h3>
                         </div>
 
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl"></h3>
-                            <h3 class="t-op-nextlvl label-tag"></h3>
-                        </div>
 
                     </div>
                 </div>

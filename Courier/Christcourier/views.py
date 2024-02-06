@@ -11,8 +11,9 @@ from django.db.models import Count
 
 def index(request):
     if request.method == 'POST':
-        username = request.POST.get('email')
+        username = request.POST.get('Email')
         pass1 = request.POST.get('pass')
+        print(username,pass1)
         
         # Check if password matches for a specific user
         user = authenticate(request, username=username, password=pass1)
@@ -80,14 +81,8 @@ def receive(request):
         reg_Number = request.POST.get('Reg_No')
         pass1 = request.POST.get('pass')
 
-        if usertype == 'staff':
-            my_user = User.objects.create_user(username=Email,email=Email,password=pass1,first_name=Name,is_staff=True)
-            my_user.save()
-        else:
-            my_user1 = User.objects.create_user(username=Email,email=Email,password=pass1,first_name=Name)
-            my_user1.save()
-
-        Regs=New_User(email=Email,
+      
+        Regs=New_User(rec_id=Email,
         name=Name,
         phone=Phone_Number,
         reg_no=reg_Number)
@@ -127,62 +122,21 @@ def recipient(request):
     det=New_User.objects.all()
     return render(request,"admin/recipient.html",{'recipient':det})
 
-# def plot_graph(request):
-#     # Retrieve data from the database
-#     data = P_Details.objects.values('reg_date', 'rec_company')
-
-#     # Extract data for plotting
-#     dates = [entry['reg_date'] for entry in data]
-#     companies = [entry['rec_company'] for entry in data]
-
-#     # Create a plot
-#     plt.figure(figsize=(10, 6))
-#     plt.scatter(dates, companies)
-#     plt.title('Registration Date vs Company')
-#     plt.xlabel('Registration Date')
-#     plt.ylabel('Company')
-#     plt.xticks(rotation=45)
-
-#     # Save the plot to a BytesIO object
-#     from io import BytesIO
-#     buffer = BytesIO()
-#     plt.savefig(buffer, format='png')
-#     buffer.seek(0)
-    
-#     # Clear the plot for the next use
-#     plt.clf()
-
-#     # Convert the BytesIO object to base64 for embedding in HTML
-#     import base64
-#     plot_image = base64.b64encode(buffer.read()).decode('utf-8')
-
-    # Pass the base64 image to the template
-    # return render(request, 'admin/dash.html', {'plot_image': plot_image})
 
 def Return_(request):
     
-    if request.method=="POST":
-        Id = request.POST.get('pId')
+    if request.method == "POST":
+        pId = request.POST.get('pId')
         Rotp = request.POST.get('rOtp')
         Rname = request.POST.get('rName')
         Rdate = request.POST.get('rDate')  # Assuming recContact is the correct name
         Ser = request.POST.get('company')
-        print(Id,Rotp,Rname,Rdate)
-        ad=Return(
-            p_id=Id,
-            p_otp=Rotp,
-            p_name=Rname,
-            p_date=Rdate,
-            p_ser=Ser,
-        )
+        print(pId,Rotp,Rname,Rdate)
+        ad = Return.objects.create(p_id=pId,p_otp=Rotp,p_name=Rname,p_date=Rdate,p_ser=Ser,)
         ad.save()
-        return redirect('dashboard')
-
-
-    return render(request,"user/Return.html")
-
-
-
+        return redirect('dashboard')   
+    else:
+        return render(request,"user/Return.html")
 
 def plot_graph(request):
     # Graph 1: Bar graph between Names and Company
@@ -237,3 +191,7 @@ def plot_graph(request):
     image_base64_3 = base64.b64encode(buffer3.read()).decode('utf-8')
 
     return render(request, "admin/dash.html", {'image_base64_1': image_base64_1, 'image_base64_2': image_base64_2, 'image_base64_3': image_base64_3})
+
+def retdet(request):
+    ret_det=Return.objects.all()
+    return render(request,"admin/retdet.html",{'rd':ret_det})

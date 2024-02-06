@@ -36,8 +36,8 @@ class P_Details(models.Model):
     rec_company = models.CharField(max_length=200, choices=Company)
 
 class Return(models.Model):
-    p_id = models.CharField(max_length=200),
-    p_otp = models.CharField(max_length=200),
+    p_id = models.CharField(max_length=200,null=True)
+    p_otp = models.CharField(max_length=200,null=True)
     p_name = models.CharField(max_length=200)
     p_date = models.DateField()
     p_ser = models.CharField(max_length=200,choices=Service)

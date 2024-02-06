@@ -194,25 +194,26 @@
                 <thead>
                     <tr>
                         <th>PARCEL ID</th>
-                        <th>Recipient's Email</th>
-                        <th>Recipient's Name</th>
-                        <th>Recipient's Contact</th>
-                        <th>Expected Delivery Date</th>
+                        <th>RETURN OTP</th>
+                        <th>RECIPIIENT'S NAME</th>
+                        <th>EXPECTED RETURN DATE</th>
+                        <th>SERVICE</th>
                         
-                        <th>Service</th>
+                        
+                        {% comment %} <th>Service</th> {% endcomment %}
                         
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Sample data, replace with dynamic data from backend -->
                     <tr>
-                        {% for p in parcel %}
-                        <td>{{p.rec_id}}</td>
-                        <td>{{p.rec_email}}</td>
-                        <td>{{p.rec_name}}</td>
-                        <td>{{p.rec_phone}}</td>
-                        <td>{{p.reg_date}}</td>
-                        <td>{{p.rec_company}}</td>
+                        {% for d in rd %}
+                        <td>{{d.pId}}</td>
+                        <td>{{d.rOtp}}</td>
+                        <td>{{d.rName}}</td>
+                        <td>{{d.rDate}}</td>
+                        <td>{{d.company}}</td>
+                        
                     </tr>
                         {% endfor %}
                     
