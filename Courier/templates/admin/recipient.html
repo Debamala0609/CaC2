@@ -184,10 +184,10 @@
         <h1>Courier Management System </h1>
     </header>
 
-    <div class="container">
+    {% comment %} <div class="container">
         <!--sidebar start-->
 
-        {% comment %} <div class="side-bar">
+         <div class="side-bar">
             <a href="testdashboard.html" class="nav-heading clickable">
                 <!-- Added anchor tag with href -->
                 Home
@@ -200,7 +200,7 @@
                     <li><a href="support.html">Support</a></li>
                 </ul>
             </div>
-        </div> {% endcomment %}
+        </div>  {% endcomment %}
         <!--sidebar end-->
 
         <section>
@@ -226,14 +226,7 @@
                         <td>{{r.reg_no}}</td>
                     </tr>
                         {% endfor %}
-                    {% comment %} <tr>
-                        <td>2</td>
-                        <td>Financial</td>
-                        <td>Closed</td>
-                        <td>Jane Smith</td>
-                        <td> date </td>
-                        <td></td>
-                    </tr> {% endcomment %}
+                    
                 </tbody>
             </table>
 

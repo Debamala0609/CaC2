@@ -47,45 +47,10 @@
                     </div>
 
                     <div class="option2 nav-option">
-                        <a href="{% url 'receive' %}">PARCEL DETAILS</a>
+                        <a href="{% url 'dashboard' %}">BACK</a>
                     </div>
 
-                    <div class="option2 nav-option">
-                        <a href="{% url 'profile'%}">PROFILE</a>
-                    </div>
-{% comment %} 
-                    <div class="nav-option option3">
-
-                        <a href="parcelentry.html">Package Entry</a>
-                    </div> {% endcomment %}
-
-                    <div class="nav-option option4">
-
-                        <a href="{% url 'Return' %}">PARCEL RETURN</a>
-                    </div>
-                    <div class="nav-option option4">
-
-                        <a href="{% url 'index' %}">LOG OUT</a>
-                    </div>
-
-
-                    {% comment %} <div class="nav-option option5">
-
-                        <li><a href="parcelreturn.html">Report</a></li>
-                    </div> {% endcomment %}
-
-                    {% comment %} <div class="nav-option option6">
-
-                        <h3> Social Media</h3>
-                    </div>
-
-                    <div class="nav-option logout">
-                        <li><a class="active" href="index.html">Log Out</a></li>
-
-                        
-                    </div> {% endcomment %}
-
-                </div>
+                 </div>
             </nav>
         </div>
         <div class="main">
@@ -138,20 +103,87 @@
                     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
                 </div>
             </div>
-            <div class="welcome-message" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 40px; text-align: center;">
-                <h2 style="color: #333; font-size: 24px; margin-bottom: 15px;">Welcome to CourierConnecT User Portal!</h2>
-                <p style="font-size: 18px; color: #666; margin-bottom: 10px;">Here you can manage your parcels and track their status.</p>
-                <p style="font-size: 18px; color: #666; margin-bottom: 10px;">Some of the features available to you:</p>
-                <ul style="font-size: 18px; color: #666; margin-left: 30px; list-style-type: disc;">
-                    <li>Track the status of your parcels.</li>
-                    <li>View delivery and return details.</li>
-                    <li>Update your contact information.</li>
-                    <li>Access support for any queries.</li>
-                </ul>
-                <p style="font-size: 18px; color: #666;">If you have any questions or need assistance, feel free to contact us.</p>
-            </div>
-            
-           
+
+            <div class="report-container">
+                <div class="report-header">
+                    <h1 class="recent-Articles">Package to be Delivered</h1>
+                    <!-- <button class="view">View All</button> -->
+                </div>  
+
+                <div class="report-body">
+                    <div class="report-topic-heading">
+                        {% comment %} <h3 class="t-op">ID</h3> {% endcomment %}
+                        <h3 class="t-op">EMAIL</h3>
+                        <h3 class="t-op">NAME</h3>
+                        <h3 class="t-op">PHONE</h3>
+                        <h3 class="t-op">reg no</h3>
+                        {% comment %} <h3 class="t-op">COMPANY</h3> {% endcomment %}
+                    </div>
+                
+
+                    <div class="items">
+                       
+
+                        <div class="item1">
+                            <div class="item1">
+                                <h3 class="t-op-nextlvl"> {{ data.email }}</h3>
+                                <h3 class="t-op-nextlvl"> {{ data.name }}</h3>
+                                <h3 class="t-op-nextlvl"> {{ data.phone }}</h3>
+                                <h3 class="t-op-nextlvl"> {{ data.reg_no }}</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="item1">
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl label-tag"></h3>
+                        </div>
+
+                        <div class="item1">
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl label-tag"></h3>
+                        </div>
+
+
+                       
+
+                    </div>
+                </div>
+            {% comment %} </div>
+            <div class="report-container">
+                <div class="report-header">
+                    <h1 class="recent-Articles">Package to be Returned</h1>
+                    <!-- <button class="view">View All</button> -->
+                </div>
+
+                <div class="report-body">
+                    <div class="report-topic-heading">
+                        <h3 class="t-op">ID</h3>
+                        <h3 class="t-op">EMAIL</h3>
+                        <h3 class="t-op">NAME</h3>
+                        <h3 class="t-op">PHONE</h3>
+                        <h3 class="t-op">DATE</h3>
+                        <h3 class="t-op">COMPANY</h3>
+                    </div>
+                 {% endcomment %}
+
+                    {% comment %} <div class="items"> {% endcomment %}
+                       
+
+                        {% comment %} <div class="item1">
+                            <div class="item1">
+                                 <h3 class="t-op-nextlvl">{{return_data.p_id}}</h3>
+                                <h3 class="t-op-nextlvl">{{return_data.p_otp}}</h3>
+                                <h3 class="t-op-nextlvl">{{return_data.p_name}}</h3>
+                                <h3 class="t-op-nextlvl">{{return_data.p_date}}</h3>
+                                <h3 class="t-op-nextlvl">{{return_data.p_ser}}</h3>
+                                {% comment %} <h3 class="t-op-nextlvl label-tag">{{data.}}</h3> {% endcomment %}
+{% comment %}     
+                            </div>
+                        </div> {% endcomment %} 
 
                         <div class="item1">
                             <h3 class="t-op-nextlvl"></h3>

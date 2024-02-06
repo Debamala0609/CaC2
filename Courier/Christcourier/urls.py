@@ -1,5 +1,5 @@
 from django.urls import path
-from Christcourier.views import index,service,about,reci,register,recipient,dashboard,contact,sdashboard,receive,pstatus,admin_db,parcel,plot_graph,Return_,retdet
+from Christcourier.views import index,service,about,reci,register,recipient,dashboard,profile,contact,sdashboard,receive,pstatus,admin_db,parcel,plot_graph,Return_,retdet
 
 urlpatterns = [
     path  ('',index,name='index'),
@@ -12,11 +12,13 @@ urlpatterns = [
     path  ('sdashboard',sdashboard,name='sdashboard'),
     path  ('receive',receive,name='receive'),
     path  ('pstatus',pstatus,name='pstatus'),
-    path ('admin_db',admin_db,name='admin_db'),
+    path  ('admin_db',admin_db,name='admin_db'),
     path  ('parcel',parcel,name='parcel'),
-    path('admindashboard',plot_graph,name='adminplot'),
-    path('recipient',recipient,name='recipient'),
-    path ('Return',Return_,name='Return'),
-    path ('retdet',retdet,name='retdet'),
+    path  ('admindashboard',plot_graph,name='adminplot'),
+    path  ('recipient',recipient,name='recipient'),
+    path  ('Return',Return_,name='Return'),
+    path  ('retdet',retdet,name='retdet'),
+    path ('profile',profile,name='profile'),
 ]  
 
+  

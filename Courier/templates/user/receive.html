@@ -71,9 +71,10 @@
         }
     </style>
     <body>
-    
+        {% comment %} <h2 style="text-align: center; justify-content: center; align-items: center; height: 100px;">ENTER YOUR PARCEL DETAILS</h2> {% endcomment %}
+
     <h2>ENTER YOUR PARCEL DETAILS</h2>
-    
+     
     <form action="{% url 'receive' %}" method="post">
         {% csrf_token %}
        
@@ -92,12 +93,12 @@
            <option value="others">Others</option>
         <br><br>
        </select>
-        <button><a href="{% url 'dashboard'%}">Add </button>
+        <button><a href="{% url 'dashboard' %}">Add </button>
             
-           <div class="logout-container">
+           {% comment %} <div class="logout-container">
                <button class="logout-btn" onclick="location.href='/logout'">Logout</button>
-           </div>
+           </div> {% endcomment %}
       </div>
-    </div>C:\Users\mayur\OneDrive\Desktop\twmp2\CaC2\Courier\templates\user\receive.html
+    </div>
     </div>
 {% endblock content %}

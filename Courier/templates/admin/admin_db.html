@@ -190,80 +190,72 @@
         <div class="side-bar">
             <a href="testdashboard.html" class="nav-heading clickable">
                 <!-- Added anchor tag with href -->
-                <h3>WELCOME ADMIN </h3>
+                <h3><important><u>WELCOME ADMIN</u> </important> </h3>
             </a>
             <div class="nav-bar">
                 <ul class="nav-list nav-styles">
+                    <br>
+                    <br>
                     <li><a href="{% url 'recipient' %}">USERS</a></li>
-                    <li><a href="{% url 'parcel' %}">PARCEL DETAILS</a></li>
-                    <li><a href="{% url 'adminplot' %}">DASHBOARD</a></li>
+                    <br>
+                    <br>
+                    <li><a href="{% url 'parcel' %}">PARCEL DELIVERY </a></li>
+                    <br>
+                    <br>
+                    <li><a href="{% url 'retdet' %}"> PARCEL RETURN </a></li>
+                    <br>
+                    <br>
+                    <li><a href="{% url 'adminplot' %}"> DASHBOARD  </a></li>
+                    <br>
+                    <br>
                     <li><a href="{% url 'index' %}">LOG OUT</a></li>
+                    <br>
+                    <br>
                 </ul>
             </div>
         </div>
         <!--sidebar end-->
 
-        <section>
-            <h2>Grievance Monitoring</h2>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Assigned To</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Sample data, replace with dynamic data from backend -->
-                    <tr>
-                        <td>1</td>
-                        <td>Academic</td>
-                        <td>Open</td>
-                        <td>John Doe</td>
-                        <td><a href="#" class="button">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Financial</td>
-                        <td>Closed</td>
-                        <td>Jane Smith</td>
-                        <td><a href="#" class="button">View</a></td>
-                    </tr>
-                </tbody>
-            </table>
 
-            <h2>Assign Grievance</h2>
+<section style="padding: 20px; grid-column: 2 / 3; background-color: #f2f2f2; border-radius: 15px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
 
-            <form>
-                <label for="grievanceType">Grievance Type:</label>
-                <select id="grievanceType" name="grievanceType">
-                    <option value="academic">Academic</option>
-                    <option value="financial">Financial</option>
-                    <!-- Add more options as needed -->
-                </select>
+    <!-- Welcome Section -->
+    <div style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #333; font-size: 32px; margin-bottom: 20px; text-align: center;">Welcome, Administrator!</h2>
+        <p style="font-size: 20px; color: #666; text-align: center;">Manage your courier operations with ease using our intuitive Courier Management System. From tracking parcels to handling returns, you have everything you need at your fingertips.</p>
+    </div>
 
-                <label for="assignTo">Assign To:</label>
-                <select id="assignTo" name="assignTo">
-                    <option value="johnDoe">John Doe</option>
-                    <option value="janeSmith">Jane Smith</option>
-                    <!-- Add more options as needed -->
-                </select>
-                
-                <label for="status">Status:</label>
-                <select id="status" name="status">
-                    <option value="Open">Open</option>
-                    <option value="Closed">Closed</option>
-                </select>
+    <!-- About Courier Management System -->
+    <div style="margin-top: 40px;">
+        <h2 style="font-size: 28px; color: #333;">About Courier Management System</h2>
+        <p style="font-size: 20px; color: #666;">Our Courier Management System is a robust platform designed to streamline the entire courier process. It offers features such as:</p>
+        <ul style="font-size: 20px; color: #666; margin-left: 30px;">
+            <li>Parcel tracking for real-time monitoring.</li>
+            <li>User management for efficient customer support.</li>
+            <li>Automated parcel delivery and return handling.</li>
+            <li>Comprehensive dashboard for analytics and insights.</li>
+        </ul>
+        <p style="font-size: 20px; color: #666;">With our system, you can optimize your courier operations, improve customer satisfaction, and stay ahead of the competition.</p>
+    </div>
 
-                <label for="grievanceId">ID:</label>
-                <input type="text" id="grievanceId" name="grievanceId"
+    <!-- Additional Features -->
+    <div style="margin-top: 40px;">
+        <h2 style="font-size: 28px; color: #333;">Additional Features</h2>
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div style="background-color: #4CAF50; color: white; padding: 20px; border-radius: 10px; flex: 1; margin-right: 10px; text-align: center;">
+                <h3 style="font-size: 24px; margin-bottom: 10px;">Customizable Dashboard</h3>
+                <p style="font-size: 20px;">Tailor the dashboard to your specific needs and preferences for better insights.</p>
+            </div>
+            <div style="background-color: #f44336; color: white; padding: 20px; border-radius: 10px; flex: 1; margin-left: 10px; text-align: center;">
+                <h3 style="font-size: 24px; margin-bottom: 10px;">Advanced Reporting</h3>
+                <p style="font-size: 20px;">Generate detailed reports on parcel delivery, returns, and user activities for analysis.</p>
+            </div>
+        </div>
+    </div>
 
-                <input type="submit" value="Assign" class="button">
-            </form>
-        </section>
+</section>
+       
     </div>
    
     <footer>

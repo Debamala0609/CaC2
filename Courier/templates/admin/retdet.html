@@ -184,7 +184,7 @@
         <h1>Courier Management System - Admin Module</h1>
     </header>
 
-    <div class="container">
+    {% comment %} <div class="container"> {% endcomment %}
        
 
         <section>
@@ -200,19 +200,19 @@
                         <th>SERVICE</th>
                         
                         
-                        {% comment %} <th>Service</th> {% endcomment %}
+                         {% comment %} <th>Service</th>      {% endcomment %}
                         
                     </tr>
-                </thead>
+                </thead> 
                 <tbody>
                     <!-- Sample data, replace with dynamic data from backend -->
                     <tr>
-                        {% for d in rd %}
-                        <td>{{d.pId}}</td>
-                        <td>{{d.rOtp}}</td>
-                        <td>{{d.rName}}</td>
-                        <td>{{d.rDate}}</td>
-                        <td>{{d.company}}</td>
+                        {% for t in ret %}
+                        <td>{{t.p_id}}</td>
+                        <td>{{t.p_otp}}</td>
+                        <td>{{t.p_name}}</td>
+                        <td>{{t.p_date}}</td>
+                        <td>{{t.p_ser}}</td>
                         
                     </tr>
                         {% endfor %}

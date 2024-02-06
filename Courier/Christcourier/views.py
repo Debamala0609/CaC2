@@ -72,24 +72,24 @@ def register(request):
         return redirect('index')    
     return render(request,"user/reg.html")
 
-def receive(request):
-    if request.method == 'POST':
-        usertype = request.POST.get('choice')
-        Email = request.POST.get('Email')
-        Name = request.POST.get('Name')
-        Phone_Number = request.POST.get('Phone_Number')
-        reg_Number = request.POST.get('Reg_No')
-        pass1 = request.POST.get('pass')
-
-      
-        Regs=New_User(rec_id=Email,
-        name=Name,
-        phone=Phone_Number,
-        reg_no=reg_Number)
-        Regs.save()
-        return redirect('index')    
-    return render(request,'user/receive.html')
-   
+def receive(request):  
+    if request.method=="POST":
+        Id = request.POST.get('parcelId')
+        email = request.POST.get('recEmail')
+        Recname = request.POST.get('recName')
+        Recphone = request.POST.get('recContact')  # Assuming recContact is the correct name
+        Deldate = request.POST.get('delDate')
+        Company = request.POST.get('company')
+        
+        add=P_Details(
+            rec_id=Id,
+            rec_email=email,
+            rec_name=Recname,
+            rec_phone=Recphone,
+            reg_date=Deldate,
+            rec_company=Company
+        )
+        add.save()
         # data = add.save()
         # if data:
     #         print("save")
@@ -100,11 +100,50 @@ def receive(request):
 
     return render(request,"user/receive.html")
 
+# def dashboard(request):
+#     u_email = request.user.username
+    
+#     # Fetch data from P_Details model
+#     p_details_res = P_Details.objects.filter(rec_email=u_email)
+#     p_details_data = p_details_res[0] if p_details_res.exists() else None
+    
+    # Fetch data from Return model
+    # return_res = Return.objects.all()  # Assuming p_id is related to user email
+    # return_data = return_res[0] if return_res.exists() else None
+    
+    # return render(request, "user/dashboard.html", {'p_details_data': p_details_data, 'return_data': return_data})
+
+# def dashboard(request):
+#     u_email=request.user.username
+#     res=P_Details.objects.filter(rec_email=u_email)
+#     data=res[0]
+
 def dashboard(request):
+    # Check if the user is authenticated
+    # if request.user.is_authenticated:
+    #     # Assuming `rec_email` in `P_Details` corresponds to the logged-in user's email
+    #     u_email = request.user.email
+    #     # Fetch P_Details objects related to the logged-in user's email
+    #     res = P_Details.objects.filter(rec_email=u_email)
+    #     # data=res[0]
+    #     # print(data)
+    #     # Check if any results were returned
+    #     if res.exists():
+    #         # If results exist, take the first one (assuming only one result is expected)
+    #         data = res.first()
+    #         return render(request, "user/dashboard.html", {'data': data})
+    #     else:
+    #         # Handle the case where no matching records are found
+    #         return render(request, "user/index.html")
+    # else:
+    #     # Handle the case where the user is not authenticated
+    #     return render(request, "user/not_authenticated.html")
+    
     return render(request,"user/dashboard.html")
 
 def sdashboard(request):
     return render(request,"staff/sdashboard.html")
+
 def pstatus(request):
     return render(request,"staff/pstatus.html")
 
@@ -112,19 +151,14 @@ def admin_db(request):
     return render(request,"admin/admin_db.html")
 
 def parcel(request):
-   
     details=P_Details.objects.all()
     return render(request,"admin/parcel.html",{'parcel':details})
-
-
 
 def recipient(request):
     det=New_User.objects.all()
     return render(request,"admin/recipient.html",{'recipient':det})
 
-
 def Return_(request):
-    
     if request.method == "POST":
         pId = request.POST.get('pId')
         Rotp = request.POST.get('rOtp')
@@ -193,5 +227,11 @@ def plot_graph(request):
     return render(request, "admin/dash.html", {'image_base64_1': image_base64_1, 'image_base64_2': image_base64_2, 'image_base64_3': image_base64_3})
 
 def retdet(request):
-    ret_det=Return.objects.all()
-    return render(request,"admin/retdet.html",{'rd':ret_det})
+    ret=Return.objects.all()
+    return render(request,"admin/retdet.html",{'ret':ret})
+  
+def profile(request):
+    u_email = request.user.username
+    res = New_User.objects.filter(email=u_email)
+    data = res.first()  # Retrieve the first object or None if queryset is empty
+    return render(request, 'user/profile.html', {'data': data})
