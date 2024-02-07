@@ -158,7 +158,13 @@ def recipient(request):
     det=New_User.objects.all()
     return render(request,"admin/recipient.html",{'recipient':det})
 
+<<<<<<< HEAD
 def Return_(request):
+=======
+
+def Return_(request):
+    
+>>>>>>> 3fc12d600ea3a14de890a5aff29cbc840d88ea34
     if request.method == "POST":
         pId = request.POST.get('pId')
         Rotp = request.POST.get('rOtp')
